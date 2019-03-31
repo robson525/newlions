@@ -1,0 +1,15 @@
+name: AboveFooter Styles
+description: AboveFooter styles for the Consultancy theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#262829"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#cacaca"

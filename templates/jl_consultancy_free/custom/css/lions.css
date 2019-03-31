@@ -1,0 +1,27 @@
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
+background-color: white;
+}
+select{
+	height: inherit;
+}
+
+.star, .red{
+	color: red;
+}	
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.rotate {
+	line-height: inherit;
+	height: auto;
+	width: auto;
+	margin: 0;
+	padding: 0;
+  	animation: rotation 2s infinite linear;
+}

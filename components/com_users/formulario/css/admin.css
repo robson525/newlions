@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	
+}
+
+header{
+	text-align:center;
+}
+
+#div_sair{
+	width:50px;
+	position:absolute;
+	margin: 5px 80%;
+	box-shadow: 1px 1px 1px rgb(0,51,0);
+}
+#div_sair a{
+	color:rgb(0,102,51);
+	text-decoration:none;
+	text-shadow: 1px 1px 1px rgb(0,51,0);
+}
+
+#tab_botao td {
+	padding: 5px 10px 5px 10px;
+}
+
+.bot {
+	background-color:#CCC;	
+	text-transform:none;
+	cursor:pointer;
+}
+
+#tab_lista {
+	text-align:center;	
+	width:2450px;
+}
+
+#tab_lista td{
+	padding:3px;	
+	font-size:14px;	
+}
+
+#bot_filtro{
+	cursor:pointer;
+	
+}
+/*
+#div_pdf {
+	margin-top:20px;
+	width:30px; 
+	text-align:center;
+	cursor:pointer;
+	margin-left:96%;
+	
+		
+}
+*/
+#div_resultado {
+	margin:auto;
+	overflow: auto ;
+	max-height: 500px;
+	min-height:150px;
+	/*width:2450px;  */
+	border: 1px solid #063;
+}

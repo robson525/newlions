@@ -1,0 +1,8 @@
+enabled: '1'
+url: ''
+target: _self
+image: 'gantry-media://main-logo/logo-2019.png'
+link: '1'
+svg: ''
+text: Lions
+class: g-logo

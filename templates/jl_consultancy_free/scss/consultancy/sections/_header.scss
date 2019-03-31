@@ -1,0 +1,14 @@
+#g-header {
+    color: $header-text-color;
+    background: $header-background;
+    background: -moz-linear-gradient(left, rgba(61,83,229,0) 27%, rgba($header-background,0.03) 29%, rgba($header-background,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(61,83,229,0) 27%,rgba($header-background,0.03) 29%,rgba($header-background,1) 100%);
+    background: linear-gradient(to right, rgba(61,83,229,0) 27%,rgba($header-background,0.03) 29%,rgba($header-background,1) 100%);
+}
+
+@media print {
+    #g-header {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}

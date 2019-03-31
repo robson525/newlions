@@ -1,0 +1,9 @@
+consultancy-theme:
+  title: 'Consultancy Theme'
+  description: 'Sample menu for Consultancy theme.'
+
+  items:
+    consultancy:
+      title: 'Home'
+      outline: home
+      home: 1

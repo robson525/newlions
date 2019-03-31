@@ -1,0 +1,445 @@
+//JoomLead 2015 - 2017
+.view-page{
+  #g-mainbar{
+    .g-content{
+      padding: 0 $content-padding;
+      margin: 0 $content-margin;
+    }
+  }
+}
+.is-sticky {
+  #g-navigation {
+    .g-offcanvas-toggle {
+      top: 1.4rem;
+    }
+
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Header
+#g-header{
+  .g-content{
+    padding: 5px $content-padding;
+    margin: $content-margin;
+  }
+  .header-contact{
+    text-align: right;
+    a{
+      color: #000;
+      font-size: 14px;
+      i{
+        color: $accent-color-2;
+        margin-right: 3px;
+      }
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+    .seprator{
+      color: $accent-color-2;
+      margin: 0 10px;
+    }
+    @include breakpoint(mobile-only){
+      text-align: center;
+      a{
+        display: block;
+      }
+    }
+  }
+}
+
+// Navigation
+#g-navigation{
+  .nav-search{
+    .g-content{
+      padding: 0 $content-padding 0 0;
+      a{
+        color: #666;
+        &:hover{
+          color: $accent-color-2;
+        }
+      }
+    }
+  }
+}
+
+// Breadcrumb
+.section-breadcrumb{
+  .qx-element-heading{
+    .section-title{
+      h2{
+        font-size: 40px;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 2;
+        padding: 5px 0 0 15px;
+        &:before{
+          background: lighten($accent-color-2,10%) none repeat scroll 0 0;
+          border-radius: 50%;
+          content: "";
+          height: 55px;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 55px;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+
+.area-title{
+  border-bottom: 1px solid #f7f8fa;
+  margin-bottom: 30px;
+  margin-top: 0;
+  padding-bottom: 10px;
+  position: relative;
+  text-transform: capitalize;
+  font-size: 40px;
+  color: #303030;
+  &:before{
+    background: $accent-color-2 none repeat scroll 0 0;
+    bottom: -1px;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 110px;
+  }
+}
+
+.platform-content{
+  .items-row{
+    .span6{
+      .item{
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: #fff;
+        .page-header{
+          h2{
+            margin: 0;
+            text-transform: uppercase;
+            color: #464646;
+            font-weight: 600;
+            font-size: 20px;
+          }
+        }
+        .tags{
+          li{
+            padding-left: 0;
+            a{
+              background: $accent-color-2;
+            }
+          }
+        }
+        p{
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+.platform-content{
+  .span12{
+    .items-row{
+      .page-header{
+        h2{
+          a{
+            text-transform: uppercase;
+            color: #464646;
+            font-weight: 600;
+            font-size: 20px;
+            &:hover{
+              color: #464646;
+            }
+          }
+        }
+      }
+      .tags{
+        li{
+          padding-left: 0;
+          a{
+            background: $accent-color-2;
+          }
+        }
+      }
+      p{
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+
+// Above Footer
+#g-abovefooter {
+  .social-ft{
+    .g-content{
+      padding: 0 $content-padding $content-padding;
+    }
+  }
+  .abovefooter-ct{
+    img{
+      margin-bottom: 20px;
+    }
+    .abovefooter-title{
+      font-size: 18px;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+      color: #cacaca;
+    }
+    ul{
+      margin-bottom: 0;
+      li{
+        line-height: 29px;
+        a{
+          text-transform: uppercase;
+
+        }
+      }
+    }
+    p{
+      color: #cacaca;
+      font-size: 15px;
+    }
+    .link-readmore{
+      font-size: 14px;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+      color: $accent-color-2;
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
+  .platform-content {
+    .moduletable {
+      .acymailing_module {
+        form{
+          margin-bottom: 0;
+        }
+        .acymailing_introtext {
+          color: #cacaca;
+          font-size: 14px;
+          h3{
+            font-size: 18px;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+          }
+          .address-info{
+            margin-bottom: 1.3rem !important;
+
+          }
+        }
+        .acymailing_module_form {
+          td {
+            padding: 0;
+          }
+          .acyfield_email {
+            input {
+              background: #e1e1e1;
+              font-size: 14px;
+              border-radius: 0;
+              height: 35px;
+              border: none;
+              color: #303030;
+              margin-bottom: 5px;
+              padding: 0 15px;
+              &:hover {
+                box-shadow: none;
+              }
+            }
+          }
+
+          .acysubbuttons {
+            .thm-button {
+              border-radius: 0;
+              outline: none;
+              margin-bottom: 0;
+              background: $accent-color-2;
+              width: 100%;
+              height: 35px;
+              padding: 0;
+              box-sizing: border-box;
+              color: #cacaca;
+              text-transform: capitalize;
+              font-weight: $font-weight-bold;
+              &:hover {
+                box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.2);
+                background: #040e18;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Footer
+#g-footer{
+  .g-content{
+    padding: $content-padding - 1 $content-padding;
+  }
+  .footer-menu{
+    text-align: right;
+    @include breakpoint(mobile-only){
+      text-align: center;
+    }
+    a{
+      font-size: 0.875rem;
+    }
+    .seprator{
+      color: $accent-color-2;
+      margin: 0 10px;
+    }
+  }
+}
+
+
+// Breadcrumb
+#g-breadcrumbs{
+  .page-heading{
+    h1{
+      margin: 0;
+      color: #fff;
+      font-size: 26px;
+      text-transform: uppercase;
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+  }
+  .jl-breadcrumb-content{
+    margin-top: 5px;
+    .jl-breadcrumb{
+      justify-content: flex-end;
+      @include breakpoint(mobile-only){
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+
+// Sidebar
+#g-aside{
+  .platform-content{
+    .moduletable {
+      .g-title{
+        border-bottom: 1px solid #dddddd;
+        padding-bottom: 10px;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: 300;
+        &:before{
+          background: $accent-color-2;
+          bottom: -1px;
+          content: "";
+          height: 1px;
+          left: 0;
+          position: absolute;
+          width: 55px;
+        }
+      }
+      .search{
+        form{
+          margin-bottom: 0;
+          input{
+            width: 100%;
+            line-height: 30px;
+            box-shadow: none;
+            padding-left: 20px;
+            &:focus, &:hover{
+              border-color: $accent-color-2;
+            }
+          }
+        }
+      }
+      .latestnews{
+        margin-bottom: 0;
+        border: 1px solid #ddd;
+        padding: 15px;
+        li{
+          list-style-type: none;
+          padding: 10px 0;
+          border-bottom: 1px solid #ddd;
+          a{
+            &:hover{
+              color: $accent-color-2;
+            }
+          }
+          &:last-child{
+            border-bottom: 0px;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.platform-content{
+  .span12{
+    .item-page{
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: #fff;
+      .page-header{
+        h2{
+          text-transform: uppercase;
+          color: #464646;
+          font-weight: 600;
+          font-size: 20px;
+        }
+      }
+      .tags{
+        li{
+          padding-left: 0;
+        }
+      }
+      p{
+        font-weight: 300;
+      }
+    }
+  }
+}
+.platform-content{
+  .items-row{
+    .span6{
+      .item{
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: #fff;
+        .page-header{
+          h2{
+            margin: 0;
+            text-transform: uppercase;
+            color: #464646;
+            font-weight: 600;
+            font-size: 20px;
+          }
+        }
+        .tags{
+          li{
+            padding-left: 0;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.back-to-top{
+  background: $accent-color-2 !important;
+  &:hover{
+    background: $accent-color-1 !important;
+    i{
+      color: #fff;
+    }
+  }
+}

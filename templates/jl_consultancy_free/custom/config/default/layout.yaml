@@ -1,0 +1,127 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/home.png'
+  name: default
+  timestamp: 1546799030
+layout:
+  /header/:
+    -
+      - custom-5173
+  /navigation/:
+    -
+      - 'logo-1829 15'
+      - 'menu-5263 85'
+  /slideshow/:
+    -
+      - position-position-1765
+  /container-main/:
+    -
+      -
+        'sidebar 14': {  }
+      -
+        'mainbar 72':
+          -
+            - system-messages-4126
+          -
+            - system-content-1246
+      -
+        'aside 14': {  }
+  /abovefooter/:
+    -
+      - 'custom-3704 30'
+      - 'custom-7118 30'
+      - 'custom-3615 40'
+    -
+      - 'social-9438 50'
+      - 'position-position-4980 50'
+  /footer/:
+    -
+      - branding-4929
+  offcanvas:
+    -
+      - mobile-menu-7330
+structure:
+  header:
+    attributes:
+      boxed: ''
+      class: section-horizontal-paddings
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+      class: section-horizontal-paddings
+  slideshow:
+    type: section
+    attributes:
+      boxed: '2'
+      class: section-horizontal-paddings
+  sidebar:
+    type: section
+  mainbar:
+    type: section
+  container-main:
+    attributes:
+      boxed: ''
+      class: 'section-horizontal-paddings section-vertical-paddings'
+      extra: {  }
+  abovefooter:
+    type: section
+    attributes:
+      boxed: ''
+      class: section-horizontal-paddings
+  footer:
+    attributes:
+      boxed: ''
+      class: section-horizontal-paddings
+  offcanvas:
+    attributes:
+      position: g-offcanvas-left
+      class: ''
+      extra: {  }
+      swipe: '1'
+      css3animation: '1'
+content:
+  custom-5173:
+    title: 'Header Contact'
+    attributes:
+      html: '<h3 style="margin:0 0 0 25px; font-weight: bold;">Lions Distrito LA6</h3>'
+  logo-1829:
+    title: 'Logo / Image'
+  menu-5263:
+    attributes:
+      mobileTarget: '1'
+    block:
+      variations: align-right
+  position-position-1765:
+    title: 'Module Position'
+    attributes:
+      key: slideshow
+  custom-3704:
+    title: Lions
+    attributes:
+      html: "<div class=\"abovefooter-ct text-center\">\n  <img src=\"gantry-media://main-logo/lions.png\" alt=\"\" />\n<p>Associação Internacional de Lions Clubes </div>\n"
+  custom-7118:
+    title: Pin
+    attributes:
+      html: "<div class=\"abovefooter-ct text-center\">\n  <img src=\"gantry-media://main-logo/pin2018.png\" alt=\"\" />\n<p>Governadoria do Distrito LA-6</p></div>\n"
+  custom-3615:
+    title: Industry
+    attributes:
+      html: "<div class=\"abovefooter-ct\">\n<h3 class=\"abovefooter-title\">Industry</h3>\n<ul>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> education</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> business</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> realestate</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> technology</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> banking</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> telicommunication</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> much more</a></li>\n</ul>\n</div>"
+  social-9438:
+    attributes:
+      enabled: 0
+    block:
+      class: social-ft
+  position-position-4980:
+    title: Subscribe
+    attributes:
+      enabled: 0
+      key: subscribe
+  branding-4929:
+    attributes:
+      content: "&copy; 2019.  \t\nTodos os direitos reservados."
+      css:
+        class: text-center
+  mobile-menu-7330:
+    title: 'Mobile Menu'

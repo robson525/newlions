@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+#div_formulario{
+	width:80%;
+	margin:auto;
+}
+
+table{
+	
+}
+
+#tabela td{ 
+	padding:15px;
+	vertical-align:top;
+}
+
+input{
+	font-family: Times, serif;	
+}
+
+select{
+	font-family: Times, serif;	
+}
+
+.col-1{
+	text-align:right;
+	font-weight:bold;	
+	color:#555555;
+	text-shadow:1px 1px 5px #666;
+}
+.span_obg{
+	color:#F03;
+	font-size:12px;
+}
+
+#tabela #enderec{
+	padding-bottom:0;	
+}
+
+#tabela #compl{
+	padding-top:0px;	
+}
+
+.span_pequeno{ 
+	font-size:9px;
+}
+
+#span_delegado{
+	font-size:12px;
+	display:none;
+}
+
+#cadastrado{
+	color:#F00;
+	text-shadow: 1px 1px 1px #666666;
+	display:none;		
+}
+
+.ocultar {
+	display:none;
+}
+
+.botao{
+	cursor:pointer; 
+	text-transform:capitalize;	
+	padding:1px 10px 1px 10px;
+	margin-top:15px;
+	margin-left:80px;
+	
+}
+
+

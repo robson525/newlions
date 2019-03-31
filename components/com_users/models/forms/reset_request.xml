@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="default" label="COM_USERS_RESET_REQUEST_LABEL">
+		<field 
+			name="username"
+			type="text"
+			label="COM_USERS_FIELD_PASSWORD_RESET_LABEL"
+			description="COM_USERS_FIELD_PASSWORD_RESET_DESC"
+			class="validate-username"
+			filter="username"
+			required="true"
+			size="11"
+			maxlength="11"
+		/>
+
+		<field
+			name="captcha"
+			type="captcha"
+			label="COM_USERS_CAPTCHA_LABEL"
+			description="COM_USERS_CAPTCHA_DESC"
+			validate="captcha"
+		/>
+	</fieldset>
+</form>
