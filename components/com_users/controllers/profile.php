@@ -11,6 +11,10 @@ defined('_JEXEC') or die;
 
 JLoader::register('UsersController', JPATH_COMPONENT . '/controller.php');
 
+require_once JPATH_COMPONENT . '/formulario/classe/Usuario.php';
+require_once JPATH_COMPONENT . '/formulario/classe/Convencao.php';
+require_once JPATH_COMPONENT . '/formulario/classe/InscricaoConvencao.php';
+
 /**
  * Profile controller class for Users.
  *
@@ -234,4 +238,39 @@ class UsersControllerProfile extends UsersController
 		// Flush the data from the session.
 		$app->setUserState('com_users.edit.profile.data', null);
 	}
+
+
+	public function inscricao(){
+
+		$app         	= JFactory::getApplication();
+		$convencaoId	= $this->input->getInt('convencao');
+		$db 			= JFactory::getDbo();
+
+		$convencao = Convencao::getById($convencaoId, $db);
+		var_dump($convencao);
+
+		if(!$convencao || !$convencao->getAberta())
+		{
+			$app->enqueueMessage('Conveção não está aberta para inscrições', 'error');
+			$this->setRedirect(JRoute::_('index.php?option=com_users&view=profile', false));
+			return false;
+		}
+
+		$user = JFactory::getUser();
+		$usuario = Usuario::getByUser($user->id, $db);
+		$inscrito = InscricaoConvencao::verificaCadastro($usuario->getId(), $convencaoId, $db);
+		
+		if($inscrito)
+		{
+			$app->enqueueMessage('Você já está inscrito na ' . $convencao->getTitulo(), 'error');
+			$this->setRedirect(JRoute::_('index.php?option=com_users&view=profile', false));
+			return false;
+		}
+
+		$app->setUserState('com_users.edit.profile.convencao', $convencaoId);
+		$this->setRedirect(JRoute::_('index.php?option=com_users&view=profile&layout=inscricao', false));
+
+		return true;
+	}
+
 }

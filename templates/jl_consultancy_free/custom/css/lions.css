@@ -25,3 +25,17 @@ select{
 	padding: 0;
   	animation: rotation 2s infinite linear;
 }
+
+.g-logo img{
+	height: 55px;
+}
+
+.table th, 
+.table td {
+	vertical-align: inherit;
+	text-align: center;
+}
+
+.table caption h4{
+	font-weight: bold;
+}

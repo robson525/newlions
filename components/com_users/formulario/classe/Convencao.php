@@ -1,4 +1,5 @@
 <?php 
+require_once 'Persistencia.php';
 
 class Convencao {
    

@@ -8,6 +8,7 @@
  */
 
 defined('_JEXEC') or die;
+die("ERROR");
 
 ?>
 

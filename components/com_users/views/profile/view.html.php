@@ -38,6 +38,10 @@ class UsersViewProfile extends JViewLegacy
 
 	protected $gerenciaConvencao;
 
+	protected $convencao; 
+
+	protected $inscricao;
+
 	/**
 	 * An instance of JDatabaseDriver.
 	 *
@@ -129,59 +133,29 @@ class UsersViewProfile extends JViewLegacy
 	 */
 	protected function prepareDocument()
 	{
-		$app   = JFactory::getApplication();
-		$menus = $app->getMenu();
-		$title = null;
+		$uri = JUri::getInstance();
 
-		$this->usuario = Usuario::getByUser($this->user->id, $this->db);
-		$this->usuario->setConnection($this->db);
-		$this->convencoes = Convencao::getAbertas($this->db);
-		$this->inscricoes = InscricaoConvencao::getByUsuario($this->usuario->getId(), $this->db);
-		$this->gerenciaConvencao = in_array(13, $this->user->groups);
-
-		// Because the application sets a default page title,
-		// we need to get it from the menu item itself
-		$menu = $menus->getActive();
-
-		if ($menu)
+		if($uri->getVar("layout") == "inscricao")
 		{
-			$this->params->def('page_heading', $this->params->get('page_title', $this->user->name));
+			$app    = JFactory::getApplication();
+			$convencaoId = $app->getUserState('com_users.edit.profile.convencao');
+			$inscricaoId = $app->getUserState('com_users.edit.profile.inscricao');
+
+			$this->convencao = Convencao::getById($convencaoId, $this->db);
+
+			if(isset($inscricao))
+				$this->inscricao = InscricaoConvencao::getById($inscricaoId);
+
+			var_dump($this->convencao, $this->inscricao);
 		}
 		else
 		{
-			$this->params->def('page_heading', JText::_('COM_USERS_PROFILE'));
+			$this->usuario = Usuario::getByUser($this->user->id, $this->db);
+			$this->usuario->setConnection($this->db);
+			$this->convencoes = Convencao::getAbertas($this->db);
+			$this->inscricoes = InscricaoConvencao::getByUsuario($this->usuario->getId(), $this->db);
+			$this->gerenciaConvencao = in_array(13, $this->user->groups);
 		}
-
-		$title = $this->params->get('page_title', '');
-
-		if (empty($title))
-		{
-			$title = $app->get('sitename');
-		}
-		elseif ($app->get('sitename_pagetitles', 0) == 1)
-		{
-			$title = JText::sprintf('JPAGETITLE', $app->get('sitename'), $title);
-		}
-		elseif ($app->get('sitename_pagetitles', 0) == 2)
-		{
-			$title = JText::sprintf('JPAGETITLE', $title, $app->get('sitename'));
-		}
-
-		$this->document->setTitle($title);
-
-		if ($this->params->get('menu-meta_description'))
-		{
-			$this->document->setDescription($this->params->get('menu-meta_description'));
-		}
-
-		if ($this->params->get('menu-meta_keywords'))
-		{
-			$this->document->setMetadata('keywords', $this->params->get('menu-meta_keywords'));
-		}
-
-		if ($this->params->get('robots'))
-		{
-			$this->document->setMetadata('robots', $this->params->get('robots'));
-		}
+		
 	}
 }

@@ -93,17 +93,30 @@ class InscricaoConvencao {
         return true;
     }
     
-    public static function getById($inscricao_id = 0){
+    public static function getById($inscricao_id = 0, $db = null){
         if(!$inscricao_id){
             $inscricao_id = '0';
         }
         $sql = "SELECT * FROM __inscricao_convencao WHERE id = " . Persistencia::prepare($inscricao_id, Persistencia::INT) . " ORDER BY id;";
-        $query = mysql_query($sql);
-        $array = new InscricaoConvencao();
-        while ($result = mysql_fetch_object($query)){
-            $array = self::load($result);
+
+        $result = new InscricaoConvencao();
+        if($db)
+        {
+            $db->setQuery($sql);
+            $db->execute();
+            $inscricoes = $db->loadObjectList();
+            foreach ($inscricoes as $insc){
+                 $result = (new InscricaoConvencao())->load($insc);
+            }
+        }else
+        {
+            $query = mysql_query($sql);
+            $array = new InscricaoConvencao();
+            while ($result = mysql_fetch_object($query)){
+                $result = self::load($result);
+            }
         }
-        return $array;
+        return $result;
     }
     
     public static function getByUsuario($usuario_id = 0 , $db = null){
@@ -131,14 +144,27 @@ class InscricaoConvencao {
         return $array;
     }
     
-    private function verificaCadastro(){
-        $sql = "SELECT * FROM __inscricao_convencao WHERE usuario_id = " . $this->getUsuario_id() . " AND convencao_id = " . $this->getConvencao_id() . " ORDER BY id;";
-        $query = mysql_query($sql);
-        if(mysql_num_rows($query)){
-            return true;
-        }else{
-            return false;
+    public static function verificaCadastro($usuario_id, $convencao_id, $db = null)
+    {
+        $sql = "SELECT * FROM __inscricao_convencao WHERE usuario_id = " . Persistencia::prepare($usuario_id, Persistencia::INT) . " AND convencao_id = " . Persistencia::prepare($convencao_id, Persistencia::INT) . ";";
+        
+        $numRows = 0;
+        if($db)
+        {
+            $db->setQuery($sql);
+            $db->execute();
+            $numRows = $db->getNumRows();
         }
+        else
+        {
+            $query = mysql_query($sql);
+            $numRows = mysql_num_rows($query); 
+        }
+
+        if($numRows)        
+            return true;
+        else
+            return false;         
     }
     
     public function InsereComprovante(Comprovante $comprovante){

@@ -18,6 +18,6 @@ if (!empty($cookieLogin) || $this->user->get('guest'))
 }
 else
 {
-	// The user is already logged in.
-	echo $this->loadTemplate('logout');
+	$app = JFactory::getApplication();
+	$app->redirect(JRoute::_('index.php?option=com_users&view=profile', false));
 }

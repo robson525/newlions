@@ -1,4 +1,6 @@
-<?php require_once 'Persistencia.php';
+<?php 
+
+require_once 'Persistencia.php';
 /**
  * Description of Usuario
  *
