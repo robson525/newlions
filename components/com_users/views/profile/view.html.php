@@ -11,6 +11,7 @@ defined('_JEXEC') or die;
 
 require_once JPATH_COMPONENT . '/formulario/classe/Usuario.php';
 require_once JPATH_COMPONENT . '/formulario/classe/Convencao.php';
+require_once JPATH_COMPONENT . '/formulario/classe/Comprovante.php';
 require_once JPATH_COMPONENT . '/formulario/classe/InscricaoConvencao.php';
 
 /**
@@ -42,6 +43,8 @@ class UsersViewProfile extends JViewLegacy
 
 	protected $inscricao;
 
+	protected $comprovante;
+
 	/**
 	 * An instance of JDatabaseDriver.
 	 *
@@ -64,8 +67,8 @@ class UsersViewProfile extends JViewLegacy
 		$this->user = JFactory::getUser();
 
 		// Get the view data.
-		$this->data	        = $this->get('Data');
-		$this->form	        = $this->getModel()->getForm(new JObject(array('id' => $this->user->id)));
+		$this->data	        	= $this->get('Data');
+		$this->form	        	= $this->getModel()->getForm(new JObject(array('id' => $this->user->id)));
 		$this->state            = $this->get('State');
 		$this->params           = $this->state->get('params');
 		$this->twofactorform    = $this->get('Twofactorform');
@@ -119,9 +122,10 @@ class UsersViewProfile extends JViewLegacy
 		// Escape strings for HTML output
 		$this->pageclass_sfx = htmlspecialchars($this->params->get('pageclass_sfx'));
 
-		$this->prepareDocument();
-
-		return parent::display($tpl);
+		if($this->prepareDocument())
+			return parent::display($tpl);
+		else
+			return "";
 	}
 
 	/**
@@ -134,28 +138,44 @@ class UsersViewProfile extends JViewLegacy
 	protected function prepareDocument()
 	{
 		$uri = JUri::getInstance();
+		$app    = JFactory::getApplication();
 
 		if($uri->getVar("layout") == "inscricao")
-		{
-			$app    = JFactory::getApplication();
-			$convencaoId = $app->getUserState('com_users.edit.profile.convencao');
+		{			
 			$inscricaoId = $app->getUserState('com_users.edit.profile.inscricao');
+			if($inscricaoId)
+			{
+				$this->inscricao = InscricaoConvencao::getById($inscricaoId, $this->db);
+				$this->convencao = Convencao::getById($this->inscricao->getConvencao_id(), $this->db);
+				if($this->inscricao->getPago()){
+					$this->comprovante = Comprovante::getById($this->inscricao->getComprovante(), $this->db);
+				}
+			}
+			else
+			{
+				$convencaoId = $app->getUserState('com_users.edit.profile.convencao');				
 
-			$this->convencao = Convencao::getById($convencaoId, $this->db);
+				if(!($convencaoId)){
+					$app->enqueueMessage('Operção inválida', 'error');
+					$app->redirect(JRoute::_('index.php?option=com_users&view=profile', false));
+					return false;
+				}
 
-			if(isset($inscricao))
-				$this->inscricao = InscricaoConvencao::getById($inscricaoId);
-
-			var_dump($this->convencao, $this->inscricao);
+				$this->convencao = Convencao::getById($convencaoId, $this->db);
+			}
 		}
 		else
 		{
+			$app->setUserState('com_users.edit.profile.convencao', null);
+			$app->setUserState('com_users.edit.profile.inscricao', null);
+
 			$this->usuario = Usuario::getByUser($this->user->id, $this->db);
 			$this->usuario->setConnection($this->db);
 			$this->convencoes = Convencao::getAbertas($this->db);
 			$this->inscricoes = InscricaoConvencao::getByUsuario($this->usuario->getId(), $this->db);
 			$this->gerenciaConvencao = in_array(13, $this->user->groups);
 		}
-		
+
+		return true;		
 	}
 }

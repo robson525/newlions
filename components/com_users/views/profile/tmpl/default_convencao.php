@@ -14,7 +14,7 @@ if(isset($this->convencoes) && count($this->convencoes)):
 ?>
 
 <div>
-	<table class="table" title="Cadastro de Conveção" style="width: 80%; margin: auto; margin-top: 50px; ">
+	<table class="table" title="Cadastro de Conveção" style="margin: auto; margin-top: 50px; ">
 		<caption><h4>Convenções</h4></caption>
 		<tr>
 			<th>Título</th>
@@ -38,9 +38,9 @@ if(isset($this->convencoes) && count($this->convencoes)):
 				?>
 				<td> 												
 					<?php if($Inscrito == false): ?>
-						<a class="button" href="<?php echo JRoute::_('index.php?option=com_users&task=profile.inscricao&convencao=' . (int) $convencao->getId()); ?>" title="Inscrever-se na Convenção">Inscrever-se</a>						
+						<a class="button" href="<?php echo JRoute::_('index.php?option=com_users&task=profile.inscrever&convencao=' . (int) $convencao->getId()); ?>" title="Inscrever-se na Convenção">Inscrever-se</a>						
 					<?php elseif($Inscrito == true): ?>                      
-						<button class="button" onclick="cadConvencao('<?php echo $convencao->getId() ?>','<?php echo $inscricaoID ?>')" title="Ver Inscrição">Ver Inscrição</button>
+						<a class="button" href="<?php echo JRoute::_('index.php?option=com_users&task=profile.visualizar&inscricao=' . (int) $inscricaoID); ?>" title="Ver Inscrição da Convenção">Ver Inscrição</a>
 					<?php endif;?>
 
 					<?php if($this->gerenciaConvencao):?> 

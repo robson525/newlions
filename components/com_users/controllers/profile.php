@@ -13,6 +13,7 @@ JLoader::register('UsersController', JPATH_COMPONENT . '/controller.php');
 
 require_once JPATH_COMPONENT . '/formulario/classe/Usuario.php';
 require_once JPATH_COMPONENT . '/formulario/classe/Convencao.php';
+require_once JPATH_COMPONENT . '/formulario/classe/Comprovante.php';
 require_once JPATH_COMPONENT . '/formulario/classe/InscricaoConvencao.php';
 
 /**
@@ -240,14 +241,19 @@ class UsersControllerProfile extends UsersController
 	}
 
 
-	public function inscricao(){
-
+	public function inscrever()
+	{
 		$app         	= JFactory::getApplication();
 		$convencaoId	= $this->input->getInt('convencao');
 		$db 			= JFactory::getDbo();
 
+		if(!isset($convencaoId)){
+			$app->enqueueMessage('Operção inválida', 'error');
+			$this->setRedirect(JRoute::_('index.php?option=com_users&view=profile', false));
+			return false;
+		}		
+
 		$convencao = Convencao::getById($convencaoId, $db);
-		var_dump($convencao);
 
 		if(!$convencao || !$convencao->getAberta())
 		{
@@ -272,5 +278,127 @@ class UsersControllerProfile extends UsersController
 
 		return true;
 	}
+
+	public function confirmar()
+	{
+		$db 			= JFactory::getDbo();
+		$app         	= JFactory::getApplication();
+		$convencaoId 	= $app->getUserState('com_users.edit.profile.convencao');
+
+		if($convencaoId){
+			$app->enqueueMessage('Operção inválida', 'error');
+			$this->setRedirect(JRoute::_('index.php?option=com_users&view=profile', false));
+			return false;
+		}
+
+		$user = JFactory::getUser();
+		$usuario = Usuario::getByUser($user->id, $db);
+		$inscrito = InscricaoConvencao::verificaCadastro($usuario->getId(), $convencaoId, $db);
+		$convencao = Convencao::getById($convencaoId, $db);
+
+		if($inscrito)
+		{			
+			$app->enqueueMessage('Você já está inscrito na ' . $convencao->getTitulo(), 'error');
+			$this->setRedirect(JRoute::_('index.php?option=com_users&view=profile', false));
+			return false;
+		}
+
+		$inscricao 	= new InscricaoConvencao();
+		$inscricao->setConnection($db);
+		$inscricao->setUsuario_id($usuario->getId());
+		$inscricao->setConvencao_id($convencaoId);
+		$inscricao->save();
+
+		if($inscricao->getId())
+		{
+			$app->enqueueMessage('Cadastro na conveção ' . $convencao->getTitulo() . ' realizado com sucesso', 'success');
+			$app->setUserState('com_users.edit.profile.inscricao', $inscricao->getId());
+			$app->setUserState('com_users.edit.profile.convencao', null);
+		}
+		else
+		{
+			$app->enqueueMessage('Ocorreu um erro ao se cadastrar na conveção ' . $convencao->getTitulo(), 'error');
+		}
+
+		$this->setRedirect(JRoute::_('index.php?option=com_users&view=profile&layout=inscricao', false));
+
+		return true;
+	}
+
+	public function visualizar()
+	{
+		$app         	= JFactory::getApplication();
+		$inscricaoId	= $this->input->getInt('inscricao');
+		$db 			= JFactory::getDbo();
+
+		if(!$inscricaoId){
+			$app->enqueueMessage('Operção inválida', 'error');
+			$this->setRedirect(JRoute::_('index.php?option=com_users&view=profile', false));
+			return false;
+		}		
+
+		$inscricao = InscricaoConvencao::getById($inscricaoId, $db);
+
+		if(!$inscricao){
+			$app->enqueueMessage('Operção inválida', 'error');
+			$this->setRedirect(JRoute::_('index.php?option=com_users&view=profile', false));
+			return false;
+		}	
+
+		$app->setUserState('com_users.edit.profile.inscricao', $inscricao->getId());
+		$this->setRedirect(JRoute::_('index.php?option=com_users&view=profile&layout=inscricao', false));
+
+		return true;
+	}
+
+	public function comprovante()
+	{
+		$extPermitidas 	= array("pdf", "jpg", "png", "jpeg");
+        $tamanhoMax 	= 4194304;
+
+		$app         	= JFactory::getApplication();
+		$db 			= JFactory::getDbo();
+
+		$file  			= $app->input->files->get('comprovante'); 
+		$inscricaoId 	= $app->getUserState('com_users.edit.profile.inscricao');
+
+		if(!isset($file) || !isset($inscricaoId))
+		{
+			$app->enqueueMessage('Operação inválida', 'error');
+			$this->setRedirect(JRoute::_('index.php?option=com_users&view=profile&layout=inscricao', false));
+			return false;		
+		}
+
+		$nome 			= JFile::makeSafe($file['name']); 
+		$extensao 		= strtolower(end(explode('.', $nome)));
+
+		if(!in_array($extensao, $extPermitidas)){
+			$app->enqueueMessage('Extensão do arquivo não é permitida', 'error');
+			$this->setRedirect(JRoute::_('index.php?option=com_users&view=profile&layout=inscricao', false));
+			return false;
+		}
+		if($file['size'] > $tamanhoMax){
+			$app->enqueueMessage('Tamanho do arquivo é superior ao permitido', 'error');
+			$this->setRedirect(JRoute::_('index.php?option=com_users&view=profile&layout=inscricao', false));
+			return false;
+		}
+
+		$inscricao = InscricaoConvencao::getById($inscricaoId, $db);
+		$pastaAnexo = '/formulario/conprovante/convencao-' . $inscricao->getConvencao_id() . '/';
+
+		$comprovante = new Comprovante($db);
+        $comprovante->setNome($nome);
+        $comprovante->setTipo("." . $extensao);
+        $comprovante->setMd5(md5($nome . date("Y-m-d H-i-s")));
+        $comprovante->setLocal($pastaAnexo);
+        $comprovante->setTempName($file['tmp_name']);
+        if($inscricao->InsereComprovante($comprovante))
+            $app->enqueueMessage('Comprovante de pagamento anexado com sucesso', 'success');
+        else
+        	$app->enqueueMessage('Houve um erro ao anexar seu comprovante. Tente novamente', 'error');
+			
+        $this->setRedirect(JRoute::_('index.php?option=com_users&view=profile&layout=inscricao', false));	
+	}
+
 
 }

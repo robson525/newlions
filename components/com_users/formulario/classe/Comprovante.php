@@ -60,7 +60,7 @@ class Comprovante {
     public function setConnection($db){
         $this->db = $db;
     }
-    
+   
     public function __construct($db = null) {
         $this->db = $db;
     }
@@ -116,7 +116,9 @@ class Comprovante {
         }
         
         if($comp){
-            return self::load($comp);
+            $comprovante = (new Comprovante())->load($comp);
+            $comprovante->setConnection($db);
+            return $comprovante;
         }else{
             return false;
         }
@@ -133,7 +135,7 @@ class Comprovante {
     }
 
     private function uploadComprovante(){
-        if(move_uploaded_file($this->getTempName(), $this->getLocal() . $this->getMd5() . $this->getTipo())){
+        if(move_uploaded_file($this->getTempName(), $this->getNomeCompleto())){
             return true;
         }else{
             return false;
@@ -141,20 +143,27 @@ class Comprovante {
     }
     
     private function removeComprovante(){
-        $arquivo = $this->getLocal() . $this->getMd5() . $this->getTipo();
-        if(unlink($arquivo)){
+        if(unlink($this->getNomeCompleto())){
             return true;
         }else{
             return false;
         }
     }
     
-    public static function deletaComprovante($id = 0){
-        $comprovante  = Comprovante::getById($id);
+    public static function deletaComprovante($id = 0, $db = null){
+        $comprovante  = Comprovante::getById($id, $db);
         if($comprovante && $comprovante->removeComprovante()){
             return $comprovante->delete();
         }
     }
+
+    public function getNomeCompleto($url = false){
+        $base = JPATH_COMPONENT;
+        if($url)
+            $base = "../../components/com_users";
+        return $base . $this->getLocal() . $this->getMd5() . $this->getTipo();
+    }
+    
     
     public function delete(){
         $sql = "DELETE FROM __comprovante WHERE id = " . $this->id;

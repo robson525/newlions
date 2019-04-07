@@ -13,3 +13,8 @@
 2019-03-31T05:30:46+00:00	INFO ::1	joomlafailure	Nome de usuário e/ou senha não correspondem ou você ainda não possui uma conta.
 2019-03-31T05:32:47+00:00	INFO ::1	joomlafailure	Nome de usuário e/ou senha não correspondem ou você ainda não possui uma conta.
 2019-03-31T05:32:57+00:00	INFO ::1	joomlafailure	Nome de usuário e/ou senha não correspondem ou você ainda não possui uma conta.
+2019-04-07T02:56:44+00:00	INFO ::1	joomlafailure	Nome de usuário e/ou senha não correspondem ou você ainda não possui uma conta.
+2019-04-07T02:56:54+00:00	INFO ::1	joomlafailure	Nome de usuário e/ou senha não correspondem ou você ainda não possui uma conta.
+2019-04-07T02:57:20+00:00	INFO ::1	joomlafailure	Nome de usuário e/ou senha não correspondem ou você ainda não possui uma conta.
+2019-04-07T02:57:32+00:00	INFO ::1	joomlafailure	Nome de usuário e/ou senha não correspondem ou você ainda não possui uma conta.
+2019-04-07T04:37:34+00:00	INFO ::1	joomlafailure	Nome de usuário e/ou senha não correspondem ou você ainda não possui uma conta.

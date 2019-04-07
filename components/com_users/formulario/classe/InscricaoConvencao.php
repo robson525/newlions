@@ -99,7 +99,7 @@ class InscricaoConvencao {
         }
         $sql = "SELECT * FROM __inscricao_convencao WHERE id = " . Persistencia::prepare($inscricao_id, Persistencia::INT) . " ORDER BY id;";
 
-        $result = new InscricaoConvencao();
+        $result = false;
         if($db)
         {
             $db->setQuery($sql);
@@ -116,6 +116,7 @@ class InscricaoConvencao {
                 $result = self::load($result);
             }
         }
+        $result->setConnection($db);
         return $result;
     }
     
@@ -170,7 +171,7 @@ class InscricaoConvencao {
     public function InsereComprovante(Comprovante $comprovante){
         
         if($this->getPago()){
-            if(!Comprovante::deletaComprovante($this->getComprovante())){
+            if(!Comprovante::deletaComprovante($this->getComprovante(), $this->db)){
                 return false;
             }
         }
