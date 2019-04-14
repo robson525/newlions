@@ -56,14 +56,13 @@ select{
     white-space: nowrap;
 }
 
-.table tr td ul.insc-pago{
-    cursor: pointer;
+.table tr td a.insc-pago{
     color: #2a64bb;
 }
 
-.table tr td ul.insc-pago:hover{
+.table tr td a.insc-pago:hover{
     color: #132d54;
-    border-bottom: 1px solid #132d54;
+    text-shadow: 1px 1px 1px #2a64bb;
 }
 
 .button{

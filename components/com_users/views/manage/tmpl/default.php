@@ -101,13 +101,26 @@ defined('_JEXEC') or die;
                         <td ><?php echo $iscrito->cidade ?></td>
                         <td ><?php echo $iscrito->clube ?></td>
                         <td >
-                            <?php foreach ($iscrito->inscricoes as $inscricao): ?>
-                                <ul class="inline insc-<?php echo $inscricao->pago ? "pago" : "npago" ?>" id="<?php echo $inscricao->id ?>" title="Ver Comprovante">
+                            <?php foreach ($iscrito->inscricoes as $inscricao): 
+                            	if($inscricao->pago):
+                            		?>
+                            		<a title="Ver Comprovante" target="_blank" class="insc-pago" href="<?php echo JRoute::_('index.php?option=com_users&task=manage.comprovante&inscricao=' . (int) $inscricao->id); ?>">
+                            		<?php
+                            	endif;
+                        	?>
+                                <ul class="inline" >
                                     <li class="insc"><?php echo InscricaoConvencao::getSNinscricao($inscricao->id) ?></li>
                                     <li class="pago"><?php echo $inscricao->pago ? "SIM" : "NÃO" ?></li>
                                 </ul>
-                                <?php $this->Ninscricoes++ ?>
-                            <?php endforeach;?>
+                            <?php 
+                            	$this->Ninscricoes++; 
+                        		if($inscricao->pago):
+                            ?>
+                            		</a>
+                        	<?php
+                    			endif; 
+                        	endforeach;
+                        	?>
                         </td>
                         <td ><?php echo $iscrito->nascimento ? DateTime::createFromFormat("Y-m-d", $iscrito->nascimento)->format('d-m-Y') : "" ?></td>
                         <td ><?php echo $iscrito->delegado ?></td>

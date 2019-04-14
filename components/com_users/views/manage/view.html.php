@@ -9,6 +9,7 @@
 
 defined('_JEXEC') or die;
 
+require_once JPATH_COMPONENT . '/formulario/classe/Usuario.php';
 require_once JPATH_COMPONENT . '/formulario/classe/Convencao.php';
 require_once JPATH_COMPONENT . '/formulario/classe/Comprovante.php';
 require_once JPATH_COMPONENT . '/formulario/classe/InscricaoConvencao.php';
@@ -37,6 +38,10 @@ class UsersViewManage extends JViewLegacy
 
 	protected $clube;
 
+	protected $inscricao; 
+
+	protected $comprovante; 
+
 	/**
 	 * Method to display the view.
 	 *
@@ -59,16 +64,41 @@ class UsersViewManage extends JViewLegacy
 			return false;
 		}		
 
-		$this->Ninscricoes	= 0;
-		$this->estado		= $app->input->getString("estado"); 
-		$this->cidade		= $app->input->getString("cidade"); 
-		$this->clube		= $app->input->getString("clube"); 
-
 		$this->db			= JFactory::getDbo();
 		$this->convencao 	= Convencao::getById($convencaoId, $this->db);
-		$this->inscritos 	= InscricaoConvencao::getInscricoesGerencia($convencaoId, $this->estado, $this->cidade, $this->clube, $this->db);		
 
-		return parent::display($tpl);
+		if($app->input->getString("layout") == "comprovante")
+		{
+			$inscricaoId = $app->getUserState('com_users.manage.inscricao');
+
+			if(!$inscricaoId)
+			{
+				$app->enqueueMessage(JText::_('JGLOBAL_AUTH_ACCESS_DENIED'), 'error');
+				$app->redirect(JRoute::_('index.php?option=com_users&view=login', false));
+				return false;
+			}
+
+			$this->inscricao 	= InscricaoConvencao::getById($inscricaoId, $this->db);
+			$this->comprovante 	= Comprovante::getById($this->inscricao->getComprovante(), $this->db);
+
+			$usuario 			= Usuario::getById($this->inscricao->getUsuario_id(), $this->db);
+			$this->user 		= JFactory::getUser($usuario->getUser_id());
+
+			parent::display($tpl);
+			exit();
+		}
+		else
+		{
+			$app->setUserState('com_users.manage.comprovante', null);
+
+			$this->estado		= $app->input->getString("estado"); 
+			$this->cidade		= $app->input->getString("cidade"); 
+			$this->clube		= $app->input->getString("clube"); 		
+			
+			$this->inscritos 	= InscricaoConvencao::getInscricoesGerencia($convencaoId, $this->estado, $this->cidade, $this->clube, $this->db);		
+
+			return parent::display($tpl);
+		}
 	}
 
 

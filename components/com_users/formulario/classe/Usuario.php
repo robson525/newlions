@@ -272,7 +272,7 @@ class Usuario {
         }
         
         if($usuario_){
-            return self::load($usuario_);
+            return (new Usuario())->load($usuario_);
         }else{
             return new Usuario();
         }
