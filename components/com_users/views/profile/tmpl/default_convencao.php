@@ -44,7 +44,7 @@ if(isset($this->convencoes) && count($this->convencoes)):
 					<?php endif;?>
 
 					<?php if($this->gerenciaConvencao):?> 
-						<button class="button" onclick="gerConvencao('<?php echo $convencao->getId() ?>')" title="Gerenciar Cadastros">Gerenciar</button>				       
+						<a class="button" href="<?php echo JRoute::_('index.php?option=com_users&task=manage.gerenciar&convencao=' . (int) $convencao->getId()); ?>" title="Gerenciar Convenções">Gerenciar</a>		       
 					<?php endif;?>
 				</td>   
 			</tr>                
@@ -53,18 +53,3 @@ if(isset($this->convencoes) && count($this->convencoes)):
 
 </div>
 <?php endif;?>
-
-
-<script type="text/javascript">
-	function cadConvencao(convId, inscId){
-		var btn = document.getElementById("btnInscricao");
-		if(btn){
-			btn.setAttribute("disabled", "disabled");
-		}
-		inscId =  inscId ? '&inscricao=' + inscId : '';
-		window.location='cadastro.html?convencao=' + convId + inscId;
-	}
-	function gerConvencao(id){
-		window.location='cadastro.html?gerenciar=' + id;
-	}
-</script>

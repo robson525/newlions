@@ -66,7 +66,7 @@ class UsersRouterRulesLegacy implements JComponentRouterRulesInterface
 		static $remind;
 		static $resend;
 		static $reset;
-		static $teste;
+		static $manage;
 
 		// Get the relevant menu items if not loaded.
 		if (empty($items))
@@ -90,9 +90,9 @@ class UsersRouterRulesLegacy implements JComponentRouterRulesInterface
 					continue;
 				}
 
-				if (empty($teste) && $item->query['view'] === 'teste')
+				if (empty($manage) && $item->query['view'] === 'manage')
 				{
-					$teste = $item->id;
+					$manage = $item->id;
 
 					continue;
 				}
@@ -166,8 +166,8 @@ class UsersRouterRulesLegacy implements JComponentRouterRulesInterface
 					}
 					break;
 
-				case 'teste':
-					if ($query['Itemid'] = $teste)
+				case 'manage':
+					if ($query['Itemid'] = $manage)
 					{
 						unset($query['view']);
 					}

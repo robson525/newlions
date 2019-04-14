@@ -160,7 +160,7 @@ class Comprovante {
     public function getNomeCompleto($url = false){
         $base = JPATH_COMPONENT;
         if($url)
-            $base = "../../components/com_users";
+            $base = "components/com_users";
         return $base . $this->getLocal() . $this->getMd5() . $this->getTipo();
     }
     

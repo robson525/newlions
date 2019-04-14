@@ -6,13 +6,29 @@
 </p>
 
 
-<div class="center">
+<div id="comprovante-container" class="center">
     <?php 
     if($this->inscricao->getPago())
     {
-        echo "<img src='" . $this->comprovante->getNomeCompleto(true) . "' class='img-polaroid' style='max-height: 200px; margin-bottom: 20px;' />";
+        if($this->comprovante->getTipo() === ".pdf")
+        {
+            ?>
+            <embed src="<?= $this->comprovante->getNomeCompleto(true) ?>" type="application/pdf" height="200px" />
+            <?php
+        }
+        else
+        {
+        ?>
+            <img src="<?= $this->comprovante->getNomeCompleto(true) ?>" class="img-polaroid" style="max-height: 200px; margin-bottom: 20px;" />
+        <?php
+        }
+        ?>
+        <p>
+            <a href="<?= $this->comprovante->getNomeCompleto(true) ?>" target="_blank" class="link"><?= $this->comprovante->getNome() ?></a>
+        </p>
+        <?php
     }
-     ?>
+    ?>
 </div>
 
 <form class="center" method="POST" action="<?= JRoute::_('index.php?option=com_users&task=profile.comprovante') ?>" enctype="multipart/form-data" onsubmit="return validaArquivo()">    

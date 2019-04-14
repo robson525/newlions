@@ -9,6 +9,10 @@ select{
 	color: red;
 }	
 
+.right{
+	text-align: right;
+}
+
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -40,9 +44,32 @@ select{
 	font-weight: bold;
 }
 
+.table.table-condensed th, 
+.table.table-condensed td {
+}
+ 
+.table.table-condensed td ul{
+	margin: 0;
+}
+
+.table-nowrap tr, .table-nowrap td{
+    white-space: nowrap;
+}
+
+.table tr td ul.insc-pago{
+    cursor: pointer;
+    color: #2a64bb;
+}
+
+.table tr td ul.insc-pago:hover{
+    color: #132d54;
+    border-bottom: 1px solid #132d54;
+}
+
 .button{
 	line-height: 1;
 	padding: 0.625rem 1rem;
+	margin: 0.1rem;
 }
 
 .bold{
@@ -61,4 +88,36 @@ select{
 .btn-out{
 	position: absolute;
     right: 0.625rem;
+}
+
+.link{
+	color: #2a64bb;
+}
+.link:hover{
+	color: #132d54;
+}
+
+@media print
+{    
+	.show-print{
+		display: block !important;
+	}
+    .no-print, .no-print *, .sticky-wrapper, .sticky-wrapper *, .back-to-top
+    {
+        display: none !important;
+    }
+    a[href]:after {
+    	content: none !important;
+  	}
+
+  	#div_table_inscricao{
+  		overflow-x: unset;
+  	}
+
+  	.table-nowrap tr,
+  	.table-nowrap td{
+  		white-space: unset;
+  		font-size: 10px !important;
+  		padding: 0;
+  	}
 }

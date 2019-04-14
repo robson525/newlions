@@ -168,12 +168,13 @@ class UsersViewProfile extends JViewLegacy
 		{
 			$app->setUserState('com_users.edit.profile.convencao', null);
 			$app->setUserState('com_users.edit.profile.inscricao', null);
+			$app->setUserState('com_users.manage.convencao', null);
 
 			$this->usuario = Usuario::getByUser($this->user->id, $this->db);
 			$this->usuario->setConnection($this->db);
 			$this->convencoes = Convencao::getAbertas($this->db);
 			$this->inscricoes = InscricaoConvencao::getByUsuario($this->usuario->getId(), $this->db);
-			$this->gerenciaConvencao = in_array(13, $this->user->groups);
+			$this->gerenciaConvencao = in_array(13, $this->user->groups);			
 		}
 
 		return true;		
