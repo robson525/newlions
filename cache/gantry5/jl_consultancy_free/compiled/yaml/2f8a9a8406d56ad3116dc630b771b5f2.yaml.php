@@ -2,10 +2,10 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'C:/wamp64/www/newlionsdla6/templates/jl_consultancy_free/custom/config/_offline/index.yaml',
-    'modified' => 1551046019,
+    'modified' => 1555289534,
     'data' => [
         'name' => '_offline',
-        'timestamp' => 1551046019,
+        'timestamp' => 1555289534,
         'version' => 7,
         'preset' => [
             'image' => 'gantry-admin://images/layouts/default.png',
@@ -33,7 +33,7 @@ return [
                 'custom-3604' => 'Header Contact',
                 'custom-6526' => 'Lions',
                 'custom-1511' => 'Pin',
-                'custom-2391' => 'Industry'
+                'custom-2391' => 'Lema'
             ],
             'logo' => [
                 'logo-2878' => 'Logo / Image'

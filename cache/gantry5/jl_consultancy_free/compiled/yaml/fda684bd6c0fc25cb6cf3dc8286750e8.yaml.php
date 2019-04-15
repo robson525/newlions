@@ -2,10 +2,10 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'C:/wamp64/www/newlionsdla6/templates/jl_consultancy_free/custom/config/_error/index.yaml',
-    'modified' => 1551046191,
+    'modified' => 1555289534,
     'data' => [
         'name' => '_error',
-        'timestamp' => 1551046191,
+        'timestamp' => 1555289534,
         'version' => 7,
         'preset' => [
             'image' => 'gantry-admin://images/layouts/default.png',

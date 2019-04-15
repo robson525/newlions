@@ -1,17 +1,17 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1551070732,
-    'checksum' => 'c162da031093d8a422c3d230cb55816b',
+    'timestamp' => 1555289513,
+    'checksum' => '9eb60dfa6705b9168b19e48478b222c0',
     'files' => [
         'templates/jl_consultancy_free/custom/config/default' => [
             'index' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/index.yaml',
-                'modified' => 1551046191
+                'modified' => 1555289015
             ],
             'layout' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/layout.yaml',
-                'modified' => 1551046191
+                'modified' => 1555289015
             ],
             'page/assets' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/page/assets.yaml',
@@ -543,7 +543,7 @@ return [
         ],
         'index' => [
             'name' => 'default',
-            'timestamp' => 1551046191,
+            'timestamp' => 1555289015,
             'version' => 7,
             'preset' => [
                 'image' => 'gantry-admin://images/layouts/home.png',
@@ -570,7 +570,7 @@ return [
                     'custom-5173' => 'Header Contact',
                     'custom-3704' => 'Lions',
                     'custom-7118' => 'Pin',
-                    'custom-3615' => 'Industry'
+                    'custom-3615' => 'Lema'
                 ],
                 'logo' => [
                     'logo-1829' => 'Logo / Image'
@@ -629,12 +629,12 @@ return [
                 '/container-main/' => [
                     0 => [
                         0 => [
-                            'sidebar 14' => [
+                            'sidebar 5' => [
                                 
                             ]
                         ],
                         1 => [
-                            'mainbar 72' => [
+                            'mainbar 90' => [
                                 0 => [
                                     0 => 'system-messages-4126'
                                 ],
@@ -644,7 +644,7 @@ return [
                             ]
                         ],
                         2 => [
-                            'aside 14' => [
+                            'aside 5' => [
                                 
                             ]
                         ]
@@ -694,10 +694,20 @@ return [
                     ]
                 ],
                 'sidebar' => [
-                    'type' => 'section'
+                    'type' => 'section',
+                    'attributes' => [
+                        'class' => '',
+                        'variations' => ''
+                    ]
                 ],
                 'mainbar' => [
                     'type' => 'section'
+                ],
+                'aside' => [
+                    'attributes' => [
+                        'class' => '',
+                        'variations' => ''
+                    ]
                 ],
                 'container-main' => [
                     'attributes' => [
@@ -776,19 +786,16 @@ return [
                     ]
                 ],
                 'custom-3615' => [
-                    'title' => 'Industry',
+                    'title' => 'Lema',
                     'attributes' => [
-                        'html' => '<div class="abovefooter-ct">
-<h3 class="abovefooter-title">Industry</h3>
-<ul>
-<li><a href="#"><i class="fa  fa-angle-right"></i> education</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> business</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> realestate</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> technology</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> banking</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> telicommunication</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> much more</a></li>
-</ul>
+                        'html' => '<div class="text-center">
+<div style="margin: 0 auto; width: 105px; text-align: left !important;">
+<strong>L</strong><span style="color: #cacaca;">BERDADE</span><br/>
+<strong>I</strong><span style="color: #cacaca;">GUALDADE</span><br/>
+<strong>O</strong><span style="color: #cacaca;">RDEM</span><br/>
+<strong>N</strong><span style="color: #cacaca;">ACIONALISMO</span><br/>
+<strong>S</strong><span style="color: #cacaca;">ERVIÇO</span> 
+</div>
 </div>'
                     ]
                 ],

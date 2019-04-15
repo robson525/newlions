@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'C:/wamp64/www/newlionsdla6/templates/jl_consultancy_free/custom/config/9/layout.yaml',
-    'modified' => 1551046191,
+    'modified' => 1555289537,
     'data' => [
         'version' => 2,
         'preset' => [

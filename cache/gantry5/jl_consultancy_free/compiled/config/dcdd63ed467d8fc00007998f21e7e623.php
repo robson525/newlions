@@ -1,17 +1,17 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1552965986,
-    'checksum' => 'd017ff66fa3cb5ebfb9a1600939946e2',
+    'timestamp' => 1555289540,
+    'checksum' => '42ab31d20fdb46e96b03eba93fd143ba',
     'files' => [
         'templates/jl_consultancy_free/custom/config/9' => [
             'index' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/9/index.yaml',
-                'modified' => 1551046191
+                'modified' => 1555289537
             ],
             'layout' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/9/layout.yaml',
-                'modified' => 1551046191
+                'modified' => 1555289537
             ],
             'page/assets' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/9/page/assets.yaml',
@@ -21,11 +21,11 @@ return [
         'templates/jl_consultancy_free/custom/config/default' => [
             'index' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/index.yaml',
-                'modified' => 1551046191
+                'modified' => 1555289537
             ],
             'layout' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/layout.yaml',
-                'modified' => 1551046191
+                'modified' => 1555289537
             ],
             'page/assets' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/page/assets.yaml',
@@ -565,7 +565,7 @@ return [
         ],
         'index' => [
             'name' => 9,
-            'timestamp' => 1551046191,
+            'timestamp' => 1555289537,
             'version' => 7,
             'preset' => [
                 'image' => 'gantry-admin://images/layouts/home.png',
@@ -592,14 +592,13 @@ return [
                     'custom-5173' => 'Header Contact',
                     'custom-3704' => 'Lions',
                     'custom-7118' => 'Pin',
-                    'custom-3615' => 'Industry'
+                    'custom-3615' => 'Lema'
                 ],
                 'logo' => [
                     'logo-1754' => 'Logo / Image'
                 ],
                 'menu' => [
-                    'menu-5263' => 'Menu',
-                    'menu-1566' => 'Menu'
+                    'menu-5263' => 'Menu'
                 ],
                 'position' => [
                     'position-position-1765' => 'Module Position',
@@ -843,19 +842,16 @@ return [
                     ]
                 ],
                 'custom-3615' => [
-                    'title' => 'Industry',
+                    'title' => 'Lema',
                     'attributes' => [
-                        'html' => '<div class="abovefooter-ct">
-<h3 class="abovefooter-title">Industry</h3>
-<ul>
-<li><a href="#"><i class="fa  fa-angle-right"></i> education</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> business</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> realestate</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> technology</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> banking</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> telicommunication</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> much more</a></li>
-</ul>
+                        'html' => '<div class="text-center">
+<div style="margin: 0 auto; width: 105px; text-align: left !important;">
+<strong>L</strong><span style="color: #cacaca;">BERDADE</span><br/>
+<strong>I</strong><span style="color: #cacaca;">GUALDADE</span><br/>
+<strong>O</strong><span style="color: #cacaca;">RDEM</span><br/>
+<strong>N</strong><span style="color: #cacaca;">ACIONALISMO</span><br/>
+<strong>S</strong><span style="color: #cacaca;">ERVIÇO</span> 
+</div>
 </div>'
                     ]
                 ],

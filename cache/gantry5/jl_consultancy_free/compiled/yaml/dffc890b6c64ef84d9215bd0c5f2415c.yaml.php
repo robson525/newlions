@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'C:\\wamp64\\www\\newlionsdla6/templates/jl_consultancy_free/custom/config/default/layout.yaml',
-    'modified' => 1551046191,
+    'modified' => 1555289537,
     'data' => [
         'version' => 2,
         'preset' => [
@@ -30,12 +30,12 @@ return [
             '/container-main/' => [
                 0 => [
                     0 => [
-                        'sidebar 14' => [
+                        'sidebar 5' => [
                             
                         ]
                     ],
                     1 => [
-                        'mainbar 72' => [
+                        'mainbar 90' => [
                             0 => [
                                 0 => 'system-messages-4126'
                             ],
@@ -45,7 +45,7 @@ return [
                         ]
                     ],
                     2 => [
-                        'aside 14' => [
+                        'aside 5' => [
                             
                         ]
                     ]
@@ -53,9 +53,9 @@ return [
             ],
             '/abovefooter/' => [
                 0 => [
-                    0 => 'custom-3704 30',
-                    1 => 'custom-7118 30',
-                    2 => 'custom-3615 40'
+                    0 => 'custom-3704 33',
+                    1 => 'custom-7118 33',
+                    2 => 'custom-3615 34'
                 ],
                 1 => [
                     0 => 'social-9438 50',
@@ -95,10 +95,20 @@ return [
                 ]
             ],
             'sidebar' => [
-                'type' => 'section'
+                'type' => 'section',
+                'attributes' => [
+                    'class' => '',
+                    'variations' => ''
+                ]
             ],
             'mainbar' => [
                 'type' => 'section'
+            ],
+            'aside' => [
+                'attributes' => [
+                    'class' => '',
+                    'variations' => ''
+                ]
             ],
             'container-main' => [
                 'attributes' => [
@@ -177,19 +187,16 @@ return [
                 ]
             ],
             'custom-3615' => [
-                'title' => 'Industry',
+                'title' => 'Lema',
                 'attributes' => [
-                    'html' => '<div class="abovefooter-ct">
-<h3 class="abovefooter-title">Industry</h3>
-<ul>
-<li><a href="#"><i class="fa  fa-angle-right"></i> education</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> business</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> realestate</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> technology</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> banking</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> telicommunication</a></li>
-<li><a href="#"><i class="fa  fa-angle-right"></i> much more</a></li>
-</ul>
+                    'html' => '<div class="text-center">
+<div style="margin: 0 auto; width: 105px; text-align: left !important;">
+<strong>L</strong><span style="color: #cacaca;">BERDADE</span><br/>
+<strong>I</strong><span style="color: #cacaca;">GUALDADE</span><br/>
+<strong>O</strong><span style="color: #cacaca;">RDEM</span><br/>
+<strong>N</strong><span style="color: #cacaca;">ACIONALISMO</span><br/>
+<strong>S</strong><span style="color: #cacaca;">ERVIÇO</span> 
+</div>
 </div>'
                 ]
             ],

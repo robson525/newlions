@@ -28,9 +28,9 @@ layout:
         'aside 5': {  }
   /abovefooter/:
     -
-      - 'custom-3704 30'
-      - 'custom-7118 30'
-      - 'custom-3615 40'
+      - 'custom-3704 33'
+      - 'custom-7118 33'
+      - 'custom-3615 34'
     -
       - 'social-9438 50'
       - 'position-position-4980 50'
