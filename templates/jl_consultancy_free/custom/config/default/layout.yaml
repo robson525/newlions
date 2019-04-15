@@ -17,15 +17,15 @@ layout:
   /container-main/:
     -
       -
-        'sidebar 14': {  }
+        'sidebar 5': {  }
       -
-        'mainbar 72':
+        'mainbar 90':
           -
             - system-messages-4126
           -
             - system-content-1246
       -
-        'aside 14': {  }
+        'aside 5': {  }
   /abovefooter/:
     -
       - 'custom-3704 30'
@@ -57,8 +57,15 @@ structure:
       class: section-horizontal-paddings
   sidebar:
     type: section
+    attributes:
+      class: ''
+      variations: ''
   mainbar:
     type: section
+  aside:
+    attributes:
+      class: ''
+      variations: ''
   container-main:
     attributes:
       boxed: ''
@@ -105,9 +112,9 @@ content:
     attributes:
       html: "<div class=\"abovefooter-ct text-center\">\n  <img src=\"gantry-media://main-logo/pin2018.png\" alt=\"\" />\n<p>Governadoria do Distrito LA-6</p></div>\n"
   custom-3615:
-    title: Industry
+    title: Lema
     attributes:
-      html: "<div class=\"abovefooter-ct\">\n<h3 class=\"abovefooter-title\">Industry</h3>\n<ul>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> education</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> business</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> realestate</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> technology</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> banking</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> telicommunication</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> much more</a></li>\n</ul>\n</div>"
+      html: "<div class=\"text-center\">\n<div style=\"margin: 0 auto; width: 105px; text-align: left !important;\">\n<strong>L</strong><span style=\"color: #cacaca;\">BERDADE</span><br/>\n<strong>I</strong><span style=\"color: #cacaca;\">GUALDADE</span><br/>\n<strong>O</strong><span style=\"color: #cacaca;\">RDEM</span><br/>\n<strong>N</strong><span style=\"color: #cacaca;\">ACIONALISMO</span><br/>\n<strong>S</strong><span style=\"color: #cacaca;\">ERVIÇO</span> \n</div>\n</div>"
   social-9438:
     attributes:
       enabled: 0

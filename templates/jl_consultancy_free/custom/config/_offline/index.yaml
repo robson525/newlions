@@ -1,5 +1,5 @@
 name: _offline
-timestamp: 1551046191
+timestamp: 1555289015
 version: 7
 preset:
   image: 'gantry-admin://images/layouts/default.png'
@@ -23,7 +23,7 @@ particles:
     custom-3604: 'Header Contact'
     custom-6526: Lions
     custom-1511: Pin
-    custom-2391: Industry
+    custom-2391: Lema
   logo:
     logo-2878: 'Logo / Image'
   menu:

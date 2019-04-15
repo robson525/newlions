@@ -1,5 +1,5 @@
 name: 9
-timestamp: 1551046191
+timestamp: 1555289015
 version: 7
 preset:
   image: 'gantry-admin://images/layouts/home.png'
@@ -23,12 +23,11 @@ particles:
     custom-5173: 'Header Contact'
     custom-3704: Lions
     custom-7118: Pin
-    custom-3615: Industry
+    custom-3615: Lema
   logo:
     logo-1754: 'Logo / Image'
   menu:
     menu-5263: Menu
-    menu-1566: Menu
   position:
     position-position-1765: 'Module Position'
     position-position-4980: Subscribe
