@@ -187,7 +187,7 @@ class UsersControllerProfile extends UsersController
 				$model->checkout($return);
 
 				// Redirect back to the edit screen.
-				$this->setMessage(JText::_('COM_USERS_PROFILE_SAVE_SUCCESS'));
+				$this->setMessage(JText::_('COM_USERS_PROFILE_SAVE_SUCCESS'), "success");
 
 				$redirect = $app->getUserState('com_users.edit.profile.redirect');
 
@@ -231,7 +231,7 @@ class UsersControllerProfile extends UsersController
 				}
 
 				// Redirect to the list screen.
-				$this->setMessage(JText::_('COM_USERS_PROFILE_SAVE_SUCCESS'));
+				$this->setMessage(JText::_('COM_USERS_PROFILE_SAVE_SUCCESS'), "success");
 				$this->setRedirect(JRoute::_($redirect, false));
 				break;
 		}

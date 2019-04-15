@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 ?>
 <div>
 
-	<table class="category" title="Informações Cadastrais" style="width: 80%; margin: auto; margin-top: 50px;">
+	<table class="table table-bordered table-profile" title="Informações Cadastrais" style="width: 80%; margin: auto; margin-top: 50px;">
 		<caption><h4>Informações Cadastrais</h4></caption>
 		<tr>
 			<th style="width:25%">CPF / Login</th>

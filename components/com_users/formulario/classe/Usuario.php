@@ -292,7 +292,9 @@ class Usuario {
         }
         
         if($usuario_){
-            return (new Usuario())->load($usuario_);
+            $usuario = (new Usuario())->load($usuario_);
+            $usuario->setConnection($db);
+            return $usuario;
         }else{
             return new Usuario();
         }

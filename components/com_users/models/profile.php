@@ -9,6 +9,8 @@
 
 defined('_JEXEC') or die;
 
+require_once JPATH_COMPONENT . '/formulario/classe/Usuario.php';
+
 use Joomla\Registry\Registry;
 
 /**
@@ -46,6 +48,43 @@ class UsersModelProfile extends JModelForm
 		// Load the helper and model used for two factor authentication
 		JLoader::register('UsersModelUser', JPATH_ADMINISTRATOR . '/components/com_users/models/user.php');
 		JLoader::register('UsersHelper', JPATH_ADMINISTRATOR . '/components/com_users/helpers/users.php');
+	}
+
+	public function validate($form, $requestData, $group = NULL){
+
+		$return = true;
+
+		if(strlen($requestData['registration']) != 10){
+			$this->setError('A Matrícula digitada é inválida. Informe outra matrícula.');
+			$return = false;
+		}			
+		elseif ($requestData['registration'] != "0000000000"  && $this->verifica('matricula', $requestData['registration']) !== false) {
+			$this->setError('A Matrícula digitada já está em uso. Informe outra matrícula.');	
+			$return = false;			
+		}
+
+		$validate = parent::validate($form, $requestData, $group);
+
+		if(!$return || !$validate)
+			return false;
+
+		return $validate;
+	}
+
+	private function verifica($campo, $valor) {
+	    $tabela = $campo=='matricula' ? '__usuario' : 'jom1_users';
+	    $campo = $campo=='matricula' ? 'matricula' : 'username';
+	   	$db = $this->getDbo();		   	
+	    $sql = "SELECT * FROM $tabela WHERE $campo = '$valor';";
+	    $db->setQuery($sql);
+    	$results = $db->loadObjectList();
+	    if (count($results) > 0) {
+	    	if($results[0]->$campo == $valor)
+	    		return false;
+	    	else
+	        	return $results[0]->id;
+	    } else
+	        return false;
 	}
 
 	/**
@@ -198,6 +237,7 @@ class UsersModelProfile extends JModelForm
 			$form->setFieldAttribute('username', 'message', '');
 			$form->setFieldAttribute('username', 'readonly', 'true');
 			$form->setFieldAttribute('username', 'required', 'false');
+			$form->setFieldAttribute('username', 'class', 'span4');
 		}
 
 		// When multilanguage is set, a user's default site language should also be a Content Language
@@ -390,6 +430,37 @@ class UsersModelProfile extends JModelForm
 
 			return false;
 		}
+
+		$birthday	= null;
+		if($data['birthday'])
+		{
+			$date = explode("-", $data['birthday']);
+			$birthday =  $date[2] . "-" . $date[1] . "-" . $date[0];
+		}
+
+		$usuario = Usuario::getByUser($user->id, $this->getDbo());
+		$usuario->setMatricula($data['registration']);
+		$usuario->setNascimento($birthday);
+		$usuario->setEndereco($data['addres']);
+		$usuario->setComplemento($data['addres-comp']);
+		$usuario->setEstado($data['state']);
+		$usuario->setCidade($data['city']);
+		$usuario->setClube($data['club']);
+		$usuario->setDelegado($data['club-delegate']);
+		$usuario->setCargo_clube($data['club-office']);
+		$usuario->setQual_cc($data['club-other']);
+		$usuario->setCargo_distrito($data['district-office']);
+		$usuario->setQual_cd($data['district-other']);
+		$usuario->setCl_mj($data['melvin-jones']);
+		$usuario->setPrefixo($data['prefix']);
+		$usuario->setCamisa($data['shirt']);			
+		
+		if(!$usuario->save())
+		{
+			$this->setError(JText::sprintf('COM_USERS_REGISTRATION_SAVE_FAILED', $usuario->getError()));
+
+			return false;
+    	}
 
 		return $user->id;
 	}

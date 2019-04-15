@@ -219,11 +219,6 @@
 			default="NÃO"
 		>
 			<option value=""></option>
-			<option value="PRESIDENTE">PRESIDENTE</option>
-			<option value="SECRETÁRIO">SECRETÁRIO</option>
-			<option value="TESOUREIRO">TESOUREIRO</option>
-			<option value="LEO">LEO</option>
-			<option value="OUTRO">OUTRO</option><option value="0"></option>
 			<option value="GOVERNADOR">GOVERNADOR</option>
 			<option value="VICE GOVERNADOR">VICE GOVERNADOR</option>
 			<option value="PDG">PDG</option>

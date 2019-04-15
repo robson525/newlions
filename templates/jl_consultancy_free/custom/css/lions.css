@@ -44,8 +44,11 @@ select{
 	font-weight: bold;
 }
 
-.table.table-condensed th, 
-.table.table-condensed td {
+.table.table-profile th{
+	text-align: right;
+}
+.table.table-profile td {
+	text-align: left;
 }
  
 .table.table-condensed td ul{

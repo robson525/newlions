@@ -137,7 +137,7 @@ class UsersViewProfile extends JViewLegacy
 	 */
 	protected function prepareDocument()
 	{
-		$uri = JUri::getInstance();
+		$uri 	= JUri::getInstance();
 		$app    = JFactory::getApplication();
 
 		if($uri->getVar("layout") == "inscricao")
@@ -145,15 +145,15 @@ class UsersViewProfile extends JViewLegacy
 			$inscricaoId = $app->getUserState('com_users.edit.profile.inscricao');
 			if($inscricaoId)
 			{
-				$this->inscricao = InscricaoConvencao::getById($inscricaoId, $this->db);
-				$this->convencao = Convencao::getById($this->inscricao->getConvencao_id(), $this->db);
+				$this->inscricao 		= InscricaoConvencao::getById($inscricaoId, $this->db);
+				$this->convencao 		= Convencao::getById($this->inscricao->getConvencao_id(), $this->db);
 				if($this->inscricao->getPago()){
-					$this->comprovante = Comprovante::getById($this->inscricao->getComprovante(), $this->db);
+					$this->comprovante 	= Comprovante::getById($this->inscricao->getComprovante(), $this->db);
 				}
 			}
 			else
 			{
-				$convencaoId = $app->getUserState('com_users.edit.profile.convencao');				
+				$convencaoId 		= $app->getUserState('com_users.edit.profile.convencao');				
 
 				if(!($convencaoId)){
 					$app->enqueueMessage('Operção inválida', 'error');
@@ -161,7 +161,30 @@ class UsersViewProfile extends JViewLegacy
 					return false;
 				}
 
-				$this->convencao = Convencao::getById($convencaoId, $this->db);
+				$this->convencao 	= Convencao::getById($convencaoId, $this->db);
+			}
+		}
+		elseif($uri->getVar("layout") == "edit")
+		{
+			$this->usuario 	= Usuario::getByUser($this->user->id, $this->db);
+			$data 			= $this->form->getData();
+			if(!$data->get("registration"))
+			{
+				$data->set("registration", $this->usuario->getMatricula());
+				$data->set("birthday", $this->usuario->getNascimento());
+				$data->set("addres", $this->usuario->getEndereco());
+				$data->set("addres-comp", $this->usuario->getComplemento());
+				$data->set("state", $this->usuario->getEstado());
+				$data->set("city", $this->usuario->getCidade());
+				$data->set("club", $this->usuario->getClube());
+				$data->set("club-delegate", $this->usuario->getDelegado());
+				$data->set("club-office", $this->usuario->getCargo_clube());
+				$data->set("club-other", $this->usuario->getQual_cc());
+				$data->set("district-office", $this->usuario->getCargo_distrito());
+				$data->set("district-other", $this->usuario->getQual_cd());
+				$data->set("melvin-jones", $this->usuario->getCl_mj());
+				$data->set("prefix", $this->usuario->getPrefixo());
+				$data->set("shirt", $this->usuario->getCamisa());
 			}
 		}
 		else
@@ -170,11 +193,10 @@ class UsersViewProfile extends JViewLegacy
 			$app->setUserState('com_users.edit.profile.inscricao', null);
 			$app->setUserState('com_users.manage.convencao', null);
 
-			$this->usuario = Usuario::getByUser($this->user->id, $this->db);
-			$this->usuario->setConnection($this->db);
-			$this->convencoes = Convencao::getAbertas($this->db);
-			$this->inscricoes = InscricaoConvencao::getByUsuario($this->usuario->getId(), $this->db);
-			$this->gerenciaConvencao = in_array(13, $this->user->groups);			
+			$this->usuario 				= Usuario::getByUser($this->user->id, $this->db);
+			$this->convencoes 			= Convencao::getAbertas($this->db);
+			$this->inscricoes 			= InscricaoConvencao::getByUsuario($this->usuario->getId(), $this->db);
+			$this->gerenciaConvencao 	= in_array(13, $this->user->groups);			
 		}
 
 		return true;		

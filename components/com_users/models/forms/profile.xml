@@ -15,30 +15,42 @@
 			filter="string"
 			required="true"
 			size="30"
+			maxlength="150"
 		/>
 
 		<field
 			name="username"
 			type="text"
-			label="COM_USERS_PROFILE_USERNAME_LABEL"
-			description="COM_USERS_DESIRED_USERNAME"
-			class="validate-username"
-			filter="username"
-			message="COM_USERS_PROFILE_USERNAME_MESSAGE"
-			required="true"
-			size="30"
-			validate="username"
+			label="CPF"
+			description="CPF"
+			class="span4"
+			readonly="true"
 		/>
 
 		<field
-			name="password1"
+			name="registration"
+			type="text"
+			label="Matrícula"
+			description="Digite seu CPF"
+			class="validate-username span4"
+			filter="username"
+			required="true"
+			size="10"
+			maxlength="10"
+			validate="username"
+		/>
+		
+		<field
+			name="password1" 
 			type="password"
 			label="COM_USERS_PROFILE_PASSWORD1_LABEL"
 			description="COM_USERS_DESIRED_PASSWORD"
 			autocomplete="off"
-			class="validate-password"
+			class="validate-password span6"
+			field="password1"
 			filter="raw"
-			size="30"
+			size="50"
+			maxlength="50"
 			validate="password"
 		/>
 
@@ -48,11 +60,12 @@
 			label="COM_USERS_PROFILE_PASSWORD2_LABEL"
 			description="COM_USERS_PROFILE_PASSWORD2_DESC"
 			autocomplete="off"
-			class="validate-password"
+			class="validate-password span6"
 			field="password1"
 			filter="raw"
 			message="COM_USERS_PROFILE_PASSWORD1_MESSAGE"
-			size="30"
+			size="50"
+			maxlength="50"
 			validate="equals"
 		/>
 
@@ -61,27 +74,216 @@
 			type="email"
 			label="COM_USERS_PROFILE_EMAIL1_LABEL"
 			description="COM_USERS_PROFILE_EMAIL1_DESC"
+			field="id"
 			filter="string"
 			required="true"
 			size="30"
+			maxlength="50"
 			unique="true"
 			validate="email"
 			validDomains="com_users.domains"
 			autocomplete="email"
+			class="span6"
 		/>
 
 		<field
 			name="email2"
 			type="email"
-			label="COM_USERS_PROFILE_EMAIL2_LABEL"
-			description="COM_USERS_PROFILE_EMAIL2_DESC"
+			label="Confirmar email"
+			description="COM_USERS_REGISTER_EMAIL2_DESC"
 			field="email1"
 			filter="string"
 			message="COM_USERS_PROFILE_EMAIL2_MESSAGE"
 			required="true"
 			size="30"
+			maxlength="50"
 			validate="equals"
+			class="span6"
 		/>
+		
+		<field
+			name="birthday"
+			type="calendar"
+			label="Aniversário"
+			description="Selecione a data do seu aniversário"
+			format="%d-%m-%Y"
+			maxlength="10"
+		/>
+		
+		<field
+			name="addres"
+			type="text"
+			label="Endereço"
+			description="Digite seu endereço"
+			maxlength="99"
+		/>
+		
+		<field
+			name="addres-comp"
+			type="text"
+			label="Complemento"
+			description="Digite o complemento do endereço"
+			maxlength="99"
+		/>
+
+		
+		<field
+			name="state"
+			type="list"
+			label="Estado"
+			description="Selecione seu estado"
+			class="span4"
+			required="true"
+		>
+			<option value=""></option>
+			<option value="AMAPÁ">AMAPÁ</option>
+			<option value="MARANHÃO">MARANHÃO</option>
+			<option value="PARÁ">PARÁ</option>
+			<option value="PIAUÍ">PIAUÍ</option>
+		</field>
+		
+		<field
+			name="city"
+			type="list"
+			label="Cidade"
+			description="Selecione sua cidade"
+			class="span4"
+			required="true"
+		>
+			<option value=''>Selecione um estado</option>
+		</field>
+		
+		<field
+			name="club"
+			type="list"
+			label="Clube"
+			description="Selecione seu lube"
+			class="span4"
+			required="true"
+		>
+			<option value=''>Selecione um estado</option>
+		</field>
+		
+		<field
+			name="club-delegate"
+			type="list"
+			label="Delegado"
+			description="Selecione se você é delegado do seu clube"
+			class="span2"
+			default="NÃO"
+		>
+			<option value="SIM">SIM</option>
+			<option value="NÃO">NÃO</option>
+			
+		</field>
+		
+		<field
+			name="club-office"
+			type="list"
+			label="Cargo no Clube"
+			description="Selecione seu cargo no clube"
+			class="span4"
+			default="NÃO"
+		>
+			<option value=""></option>
+			<option value="PRESIDENTE">PRESIDENTE</option>
+			<option value="SECRETÁRIO">SECRETÁRIO</option>
+			<option value="TESOUREIRO">TESOUREIRO</option>
+			<option value="LEO">LEO</option>
+			<option value="OUTRO">OUTRO</option>
+		</field>
+		
+		<field
+			name="club-other"
+			type="text"
+			label="Qual Cargo?"
+			description="Digite seu cargo no clube"
+			maxlength="99"
+			class="span5 hidden-filed"
+		/>
+		
+		<field
+			name="district-office"
+			type="list"
+			label="Cargo no Distrito"
+			description="Selecione seu cargo no clube"
+			class="span4"
+			default="NÃO"
+		>
+			<option value=""></option>
+			<option value="GOVERNADOR">GOVERNADOR</option>
+			<option value="VICE GOVERNADOR">VICE GOVERNADOR</option>
+			<option value="PDG">PDG</option>
+			<option value="ASSESSOR">ASSESSOR</option>
+			<option value="ASSISTENTE">ASSISTENTE</option>
+			<option value="ASSOCIADO">ASSOCIADO</option>
+			<option value="CONVIDADO">CONVIDADO</option>
+			<option value="COORDENADOR">COORDENADOR</option>
+			<option value="DIRETOR">DIRETOR</option>
+			<option value="DOMADORA">DOMADORA</option>
+			<option value="PRESIDENTE DA RAGIÃO">PRESIDENTE DA RAGIÃO</option>
+			<option value="PRESIDENTE DA DIVISÃO">PRESIDENTE DA DIVISÃO</option>
+			<option value="COORDENADOR">COORDENADOR</option>
+			<option value="EX-PRESIDENTE CONSELHO">EX-PRESIDENTE CONSELHO</option>
+			<option value="VOGAL">VOGAL</option>
+			<option value="SECRETARIO">SECRETARIO</option>
+			<option value="TESOUREIRO">TESOUREIRO</option>
+			<option value="VICE PRESIDENTE">VICE PRESIDENTE</option>
+			<option value="OUTRO">OUTRO</option>
+		</field>
+		
+		<field
+			name="district-other"
+			type="text"
+			label="Qual Cargo?"
+			description="Digite seu cargo no clube"
+			maxlength="99"
+			class="span5 hidden-filed"
+		/>
+		
+		<field
+			name="melvin-jones"
+			type="list"
+			label="CL Melvin Jones"
+			description="Selecione se você é companheiro Melvin Jones"
+			class="span2"
+			default="NÃO"
+			required="true"
+		>
+			<option value="SIM">SIM</option>
+			<option value="NÃO">NÃO</option>			
+		</field>
+		
+		<field
+			name="prefix"
+			type="list"
+			label="Prefixo"
+			description="Selecione seu prefixo"
+			class="span2"
+			required="true"
+		>
+			<option value=""></option>
+			<option value="Cal">Cal</option>
+			<option value="CL">CL</option>
+			<option value="DM">DM</option>
+			<option value="CCLEO">CCLEO</option>
+			<option value="Convidado">Convidado</option>			
+		</field>
+		
+		<field
+			name="shirt"
+			type="list"
+			label="Tamanho Camisa"
+			description="Selecione o tamanho da sua camisa"
+			class="span2"
+			required="true"
+		>
+			<option value=""></option>
+			<option value="P">P</option>
+			<option value="M">M</option>
+			<option value="G">G</option>
+			<option value="GG">GG</option>		
+		</field>
 	</fieldset>
 	
 	<!-- Used to get the two factor authentication configuration -->

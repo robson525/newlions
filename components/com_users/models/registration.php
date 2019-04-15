@@ -53,7 +53,7 @@
 				$return = false;
 			}
 			elseif ($this->verifica('cpf', $requestData['username']) !== false) {
-				$this->setError('O CPF infrmado já está em uso. Informe outro CPF.');
+				$this->setError('O CPF informado já está em uso. Informe outro CPF.');
 				$return = false;
 			}
 
@@ -497,15 +497,22 @@
 				return false;
 			}
 
-			$config = JFactory::getConfig();
-			$db = $this->getDbo();
-			$query = $db->getQuery(true);
+			$config 	= JFactory::getConfig();
+			$db 		= $this->getDbo();
+			$query 		= $db->getQuery(true);
+			$birthday	= null;
 
+			if( $data['birthday'])
+			{
+				$date = explode("-", $data['birthday']);
+				$birthday =  $date[2] . "-" . $date[1] . "-" . $date[0];
+			}
+			
 			$usuario = new Usuario();
 			$usuario->setConnection($db);
 			$usuario->setUser_id($user->id);
 			$usuario->setMatricula($data['registration']);
-			$usuario->setNascimento(strrev($data['birthday']));
+			$usuario->setNascimento($birthday);
 			$usuario->setEndereco($data['addres']);
 			$usuario->setComplemento($data['addres-comp']);
 			$usuario->setEstado($data['state']);
