@@ -14,10 +14,6 @@ defined('_JEXEC') or die;
 	<?= $this->convencao->getTitulo() ?>		
 </h1>
 
-<h2 class="center">
-	Inscrição Número : <?php echo $this->inscricao->getNinscricao(); ?>		
-</h2>
-
 <?php 
 	if(isset($this->inscricao))
 		echo $this->loadTemplate('visualizar'); 

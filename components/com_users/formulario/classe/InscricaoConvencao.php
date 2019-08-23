@@ -175,6 +175,7 @@ class InscricaoConvencao {
                 return false;
             }
         }
+        //var_dump($comprovante);die();
         $comprovante->save();
         if($comprovante->getId()){
             $this->setComprovante($comprovante->getId());
@@ -190,8 +191,8 @@ class InscricaoConvencao {
         $sql  = "SELECT u.*, us.name, us.email, count(*) as inscricoes ";
         $sql .= "FROM __inscricao_convencao ic ";
         $sql .= "INNER JOIN __usuario u ON u.id = ic.usuario_id ";
-        $sql .= "INNER JOIN jom1_users us ON us.id = u.user_id ";
-        $sql .= "INNER JOIN jom1_user_usergroup_map ugm ON ugm.user_id = us.id ";
+        $sql .= "INNER JOIN jom1__users us ON us.id = u.user_id ";
+        $sql .= "INNER JOIN jom1__user_usergroup_map ugm ON ugm.user_id = us.id ";
         $sql .= "WHERE ugm.group_id IN (2, 13) AND ic.convencao_id = ".Persistencia::prepare($convencaoId, Persistencia::FK) . " ";
         
         $sql .= ($estado) ? "AND u.estado = " . Persistencia::prepare($estado, Persistencia::STRING) . " " : "";
@@ -258,10 +259,10 @@ class InscricaoConvencao {
     
     public static function fetInscritosSemana($convencaoId = 0, $geral = false){
         $sql  = "SELECT COUNT(us.id) AS quantidade ";
-        $sql .= "FROM jom1_users us ";
+        $sql .= "FROM jom1__users us ";
         $sql .= "INNER JOIN __usuario u ON u.user_id = us.id ";
         $sql .= "INNER JOIN __inscricao_convencao ic ON ic.usuario_id = u.id ";
-        $sql .= "INNER JOIN jom1_user_usergroup_map ugm ON ugm.user_id = us.id ";
+        $sql .= "INNER JOIN jom1__user_usergroup_map ugm ON ugm.user_id = us.id ";
         $sql .= "WHERE registerDate > (NOW() - INTERVAL 7 DAY) AND ugm.group_id IN (2, 13) ";
         $sql .= "AND ic.convencao_id = " . Persistencia::prepare($convencaoId, Persistencia::FK) . " ";
         if($geral ==  false){
@@ -275,10 +276,10 @@ class InscricaoConvencao {
     
     public static function getTotalInscritos($convencaoId = 0){
         $sql  = "SELECT COUNT(distinct ic.usuario_id) AS total_inscritos, COUNT(*) AS total_incricoes ";
-        $sql .= "FROM jom1_users us ";
+        $sql .= "FROM jom1__users us ";
         $sql .= "INNER JOIN __usuario u ON u.user_id = us.id ";
         $sql .= "INNER JOIN __inscricao_convencao ic ON ic.usuario_id = u.id ";
-        $sql .= "INNER JOIN jom1_user_usergroup_map ugm ON ugm.user_id = us.id ";
+        $sql .= "INNER JOIN jom1__user_usergroup_map ugm ON ugm.user_id = us.id ";
         $sql .= "WHERE ic.convencao_id = " . Persistencia::prepare($convencaoId, Persistencia::FK) . " ";
         
         $query = mysql_query($sql);
@@ -304,7 +305,7 @@ class InscricaoConvencao {
     
 
     public static function getSNinscricao($id) {
-        $inscricao = $id - 1791;
+        $inscricao = $id - 2351;
         if(strlen($inscricao) == 1){
             return '00' . $inscricao;
         }else if(strlen($inscricao) == 2){

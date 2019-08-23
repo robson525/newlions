@@ -4,10 +4,10 @@ USE `lionsdla6`;
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `jom1_user_reset_senha`
+-- Estrutura da tabela `jom1__user_reset_senha`
 --
-DROP TABLE IF EXISTS jom1_user_reset_senha;
-CREATE TABLE IF NOT EXISTS `jom1_user_reset_senha` (
+DROP TABLE IF EXISTS jom1__user_reset_senha;
+CREATE TABLE IF NOT EXISTS `jom1__user_reset_senha` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `data` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,

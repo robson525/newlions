@@ -23,7 +23,7 @@ if(isset($_POST['email']) && $_POST['email']){
 //***************************************************************************	
 
 function verifica($campo, $valor) {
-    $tabela = $campo=='matricula' ? '__usuario' : 'jom1_users';
+    $tabela = $campo=='matricula' ? '__usuario' : 'jom1__users';
     $campo = $campo=='matricula' ? 'matricula' : 'username';
     $con = new Conecta();
     $sql = "SELECT * FROM $tabela WHERE $campo = '$valor';";
@@ -37,7 +37,7 @@ function verifica($campo, $valor) {
 
 function verificaEmail($mail){
     $con = new Conecta();
-    $sql = "SELECT * FROM jom1_users WHERE email = $mail;";
+    $sql = "SELECT * FROM jom1__users WHERE email = $mail;";
     $query = mysql_query($sql) or die("Error in query ");
     if (mysql_num_rows($query) > 0) {
         $campo = mysql_fetch_array($query);

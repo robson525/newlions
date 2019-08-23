@@ -274,6 +274,7 @@ class UsersControllerProfile extends UsersController
 		}
 
 		$app->setUserState('com_users.edit.profile.convencao', $convencaoId);
+		$aaa 	= $app->getUserState('com_users.edit.profile.convencao');
 		$this->setRedirect(JRoute::_('index.php?option=com_users&view=profile&layout=inscricao', false));
 
 		return true;
@@ -285,7 +286,7 @@ class UsersControllerProfile extends UsersController
 		$app         	= JFactory::getApplication();
 		$convencaoId 	= $app->getUserState('com_users.edit.profile.convencao');
 
-		if($convencaoId){
+		if(!$convencaoId){
 			$app->enqueueMessage('Operção inválida', 'error');
 			$this->setRedirect(JRoute::_('index.php?option=com_users&view=profile', false));
 			return false;

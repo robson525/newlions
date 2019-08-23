@@ -247,8 +247,8 @@ class Usuario {
     
     private function deleteUser(){
         $sqlD   = "DELETE u, ug "
-                . "FROM jom1_users AS u "
-                . "INNER JOIN jom1_user_usergroup_map AS ug ON ug.user_id = u.id "
+                . "FROM jom1__users AS u "
+                . "INNER JOIN jom1__user_usergroup_map AS ug ON ug.user_id = u.id "
                 . "WHERE u.id = " . $this->user_id . ";"; 
         $this->db->setQuery($sql);
         $this->db->execute();

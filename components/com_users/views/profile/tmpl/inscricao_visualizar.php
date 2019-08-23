@@ -1,8 +1,12 @@
 
+<h2 class="center">
+    Inscrição Número : <?php echo $this->inscricao->getNinscricao(); ?>     
+</h2>
+
 <h3 class="center">
-    28 a 30 de abril de 2019
+    01 a 02 de maio de 2020
 </h3>
-<h4 class="center">					
+<h4 class="center" style="display: none;">					
     Luiz Correa - Parnaiba - PI<br>
     SESC PRAIA
 </h4>
@@ -19,21 +23,23 @@
             Conta Corrente: 42056-5                 
         </p>
         <p class="center">
-            Titular: Assoc. Int. de Lions - XXª Convenção
+            Titular: DG Rita: BANCO DO BRASIL.
         </p>
     </div>
     <div class="span5">
         <h4 class="center bold">Valores das Incrições</h4>    
         <table class="table">
             <tr>
-                <td>Até dia 31/01/2019</td>
-                <td>Convencional R$ 270,00</td>
-                <td>LEO R$ 120,00</td>
+                <td>Até dia 30/12/2019</td>
+                <td>R$ 300,00</td>
             </tr>
             <tr>
-                <td>Até dia 06/04/2019</td>
-                <td>Convencional R$ 300,00</td>
-                <td>LEO R$ 150,00</td>
+                <td>Até dia 28/02/2020</td>
+                <td>R$ 320,00</td>
+            </tr>
+            <tr>
+                <td>Até dia 30/04/2020</td>
+                <td>R$ 350,00</td>
             </tr>
         </table>
     </div>

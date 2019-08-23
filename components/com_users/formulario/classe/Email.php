@@ -13,7 +13,7 @@ class Email {
         $this->mail->Host = "smtp.lionsdla6.com.br"; 
         $this->mail->SMTPAuth = true; 
         $this->mail->Username = 'convencao=lionsdla6.com.br'; 
-        $this->mail->Password = 'fortunamajor'; 
+        $this->mail->Password = 'Fortunamajor1*'; 
         
         $this->mail->setFrom("convencao@lionsdla6.com.br", "LIONS DLA-6"); // Seu e-mail
         //$this->mail->FromName = "LIONS DLA-6"; // Seu nome

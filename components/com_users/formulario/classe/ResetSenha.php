@@ -66,7 +66,7 @@ class ResetSenha {
     }
     
     private function insert(){
-        $sql  = "INSERT INTO jom1_user_reset_senha (user_id,data,code,usado) VALUES(";
+        $sql  = "INSERT INTO jom1__user_reset_senha (user_id,data,code,usado) VALUES(";
         $sql .= Persistencia::prepare($this->getUser_id(), Persistencia::FK) . ", ";
         $sql .= "NOW(), ";
         $sql .= Persistencia::prepare($this->getCode(), Persistencia::STRING) . ", ";
@@ -75,13 +75,13 @@ class ResetSenha {
         if(mysql_error()){
             return false;
         }else{
-            $this->id = mysql_fetch_object( mysql_query("SELECT LAST_INSERT_ID() AS id FROM jom1_user_reset_senha;"))->id;
+            $this->id = mysql_fetch_object( mysql_query("SELECT LAST_INSERT_ID() AS id FROM jom1__user_reset_senha;"))->id;
             return true;
         }
     }
 
     private function updade(){
-        $sql  = "UPDATE jom1_user_reset_senha SET ";
+        $sql  = "UPDATE jom1__user_reset_senha SET ";
         $sql .= "usado = " . Persistencia::prepare($this->getUsado(), Persistencia::BIT) . ", ";
         $sql .= "data_usado = NOW() ";
         $sql .= "WHERE id = " . $this->getId();
@@ -94,7 +94,7 @@ class ResetSenha {
     }
 
     public static function verificaCPF($cpf = 0){
-        $sql = "SELECT * FROM jom1_users WHERE username = " . Persistencia::prepare($cpf, Persistencia::STRING);
+        $sql = "SELECT * FROM jom1__users WHERE username = " . Persistencia::prepare($cpf, Persistencia::STRING);
         $query = mysql_query($sql);
         if(mysql_error()){
             return false;
@@ -119,7 +119,7 @@ class ResetSenha {
     }
     
     public static function verificaCode($code = ''){
-        $sql = "SELECT * FROM jom1_user_reset_senha WHERE code = " . Persistencia::prepare($code, Persistencia::STRING);
+        $sql = "SELECT * FROM jom1__user_reset_senha WHERE code = " . Persistencia::prepare($code, Persistencia::STRING);
         $query = mysql_query($sql);
         if(mysql_errno() || !mysql_num_rows($query)){
             return false;
@@ -132,7 +132,7 @@ class ResetSenha {
     }
     
     public static function getByPk($id = 0){
-        $sql = "SELECT * FROM jom1_user_reset_senha WHERE id = " . Persistencia::prepare($id, Persistencia::PK);
+        $sql = "SELECT * FROM jom1__user_reset_senha WHERE id = " . Persistencia::prepare($id, Persistencia::PK);
         $query = mysql_query($sql);
         if(mysql_errno() || !mysql_num_rows($query)){
             return false;
@@ -154,7 +154,7 @@ class ResetSenha {
     
     public function alteraSenha($senha = 0){
         if($senha){
-            $sql = "UPDATE jom1_users SET password = '" . md5($senha) . "' WHERE id = " . $this->getUser_id();
+            $sql = "UPDATE jom1__users SET password = '" . md5($senha) . "' WHERE id = " . $this->getUser_id();
             mysql_query($sql);
             if(mysql_error()){
                 return false;
