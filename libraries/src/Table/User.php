@@ -250,13 +250,15 @@ class User extends Table
 		$this->_db->setQuery($query);
 		$xid = (int) $this->_db->loadResult();
 
-		if ($xid && $xid != (int) $this->id)
+		$input = \JFactory::getApplication()->input;
+		if(!($input->get("option") == "com_users" && $input->get("layout") == "edit"))
 		{
-			$this->setError(\JText::_('JLIB_DATABASE_ERROR_EMAIL_INUSE'));
-
-			return false;
+			if ($xid && $xid != (int) $this->id)
+			{
+				$this->setError(\JText::_('JLIB_DATABASE_ERROR_EMAIL_INUSE'));
+				return false;
+			}
 		}
-
 		// Check for root_user != username
 		$config = \JFactory::getConfig();
 		$rootUser = $config->get('root_user');
