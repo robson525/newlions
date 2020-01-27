@@ -45,7 +45,8 @@
 			</table>
 		</div>
 	</div>
-<div>
+</div>
+
 <hr>
 
 <?= $this->loadTemplate('comprovante');  ?>
