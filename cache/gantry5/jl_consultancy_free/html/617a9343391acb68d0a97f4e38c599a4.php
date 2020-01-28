@@ -2,11 +2,11 @@
 return [
     '_type' => 'Gantry\\Component\\Content\\Block\\HtmlBlock',
     '_version' => 1,
-    'id' => '5c4d22f3208586.75557808',
+    'id' => '5e2960a824f020.42970329',
     'content' => '<div id="social-9438-particle" class="g-content g-particle">            <div class="g-social ">
-                    <a target="_blank" href="https://www.facebook.com/JoomLead" title="" aria-label="">
+                                            <a href="https://www.facebook.com/JoomLead" target="_blank" rel="noopener noreferrer">
                 <span class="fa fa-facebook-square fa-fw"></span>                <span class="g-social-text"></span>            </a>
-                    <a target="_blank" href="http://www.twitter.com/JoomLead" title="" aria-label="">
+                                            <a href="http://www.twitter.com/JoomLead" target="_blank" rel="noopener noreferrer">
                 <span class="fa fa-twitter-square fa-fw"></span>                <span class="g-social-text"></span>            </a>
             </div>
             </div>'

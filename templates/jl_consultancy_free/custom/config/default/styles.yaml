@@ -12,9 +12,9 @@ font:
 menustyle:
   text-color: '#666666'
   text-color-active: '#2a64bb'
-  sublevel-text-color: '#fafafa'
-  sublevel-text-color-active: '#132d54'
-  sublevel-background: '#2a64bb'
+  sublevel-text-color: '#000000'
+  sublevel-text-color-active: '#ffffff'
+  sublevel-background: '#ffffff'
 header:
   background: '#132d54'
   text-color: '#132d54'

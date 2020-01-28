@@ -44,7 +44,7 @@ class JConfig {
 	public $cache_handler = 'file';
 	public $cachetime = '15';
 	public $cache_platformprefix = '0';
-	public $MetaDesc = 'Associação Internacional de Lions Clubes
+	public $MetaDesc = 'Associação Internacional de Lions Clubes
 Governadoria do Distrito LA-6';
 	public $MetaKeys = 'lions distrito la6, lions distrito, distrito la6, lions la6, lions, distrito, la6, la, 6, dela6, lions dla6';
 	public $MetaTitle = '1';

@@ -1,173 +1,177 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledBlueprints',
-    'timestamp' => 1546799058,
-    'checksum' => '03dc28dc5bcfbff2a9ad31ef324442d2',
+    'timestamp' => 1579768821,
+    'checksum' => 'd5afcaa343f3606fcf374d33aa870764',
     'files' => [
         'templates/jl_consultancy_free/custom/particles' => [
             'particles/backtotop' => [
                 'file' => 'templates/jl_consultancy_free/custom/particles/backtotop.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600941
             ],
             'particles/sticky' => [
                 'file' => 'templates/jl_consultancy_free/custom/particles/sticky.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600941
             ]
         ],
         'templates/jl_consultancy_free/particles' => [
             'particles/offcanvas-toggle' => [
                 'file' => 'templates/jl_consultancy_free/particles/offcanvas-toggle.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600893
             ]
         ],
         'media/gantry5/engines/nucleus/particles' => [
             'particles/analytics' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/analytics.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/assets' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/assets.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/branding' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/branding.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/content' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/content.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/contentarray' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/contentarray.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/copyright' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/copyright.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/custom' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/custom.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/date' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/date.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/frameworks' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/frameworks.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/lightcase' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/lightcase.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/logo' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/logo.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/menu' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/menu.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/messages' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/messages.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/mobile-menu' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/mobile-menu.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/module' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/module.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/position' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/position.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/social' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/social.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/spacer' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/spacer.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'particles/totop' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/totop.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ]
         ],
         'templates/jl_consultancy_free/blueprints' => [
             'page' => [
                 'file' => 'templates/jl_consultancy_free/blueprints/page.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600892
             ],
             'styles/abovefooter' => [
                 'file' => 'templates/jl_consultancy_free/blueprints/styles/abovefooter.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600940
             ],
             'styles/accent' => [
                 'file' => 'templates/jl_consultancy_free/blueprints/styles/accent.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600940
             ],
             'styles/base' => [
                 'file' => 'templates/jl_consultancy_free/blueprints/styles/base.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600940
             ],
             'styles/breakpoints' => [
                 'file' => 'templates/jl_consultancy_free/blueprints/styles/breakpoints.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600940
             ],
             'styles/font' => [
                 'file' => 'templates/jl_consultancy_free/blueprints/styles/font.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600940
             ],
             'styles/footer' => [
                 'file' => 'templates/jl_consultancy_free/blueprints/styles/footer.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600940
             ],
             'styles/header' => [
                 'file' => 'templates/jl_consultancy_free/blueprints/styles/header.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600940
             ],
             'styles/main' => [
                 'file' => 'templates/jl_consultancy_free/blueprints/styles/main.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600940
             ],
             'styles/menu' => [
                 'file' => 'templates/jl_consultancy_free/blueprints/styles/menu.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600940
             ],
             'styles/menustyle' => [
                 'file' => 'templates/jl_consultancy_free/blueprints/styles/menustyle.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600940
             ],
             'styles/navigation' => [
                 'file' => 'templates/jl_consultancy_free/blueprints/styles/navigation.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600940
             ],
             'styles/offcanvas' => [
                 'file' => 'templates/jl_consultancy_free/blueprints/styles/offcanvas.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600940
             ],
             'styles/slideshow' => [
                 'file' => 'templates/jl_consultancy_free/blueprints/styles/slideshow.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600940
             ]
         ],
         'media/gantry5/engines/nucleus/blueprints' => [
             'page/assets' => [
                 'file' => 'media/gantry5/engines/nucleus/blueprints/page/assets.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ],
             'page/body' => [
                 'file' => 'media/gantry5/engines/nucleus/blueprints/page/body.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
+            ],
+            'page/fontawesome' => [
+                'file' => 'media/gantry5/engines/nucleus/blueprints/page/fontawesome.yaml',
+                'modified' => 1579768767
             ],
             'page/head' => [
                 'file' => 'media/gantry5/engines/nucleus/blueprints/page/head.yaml',
-                'modified' => 1546798625
+                'modified' => 1579768767
             ]
         ]
     ],
@@ -493,6 +497,12 @@ return [
                 'default' => true,
                 'name' => 'particles.contentarray.enabled'
             ],
+            'particles.contentarray.title' => [
+                'type' => 'input.text',
+                'label' => 'Title',
+                'description' => 'Customize the title text.',
+                'name' => 'particles.contentarray.title'
+            ],
             'particles.contentarray.article' => [
                 'type' => '_parent',
                 'name' => 'particles.contentarray.article',
@@ -685,6 +695,13 @@ return [
                 'description' => 'Use Joomla Content Plugins',
                 'default' => false,
                 'name' => 'particles.contentarray.article.display.text.prepare'
+            ],
+            'particles.contentarray.article.display.edit' => [
+                'type' => 'input.checkbox',
+                'label' => 'Show Edit Link',
+                'description' => 'Display a link to the article edit form',
+                'default' => false,
+                'name' => 'particles.contentarray.article.display.edit'
             ],
             'particles.contentarray.article.display.title' => [
                 'type' => '_parent',
@@ -1109,6 +1126,13 @@ return [
                 'description' => 'Select desired logo image.',
                 'name' => 'particles.logo.image'
             ],
+            'particles.logo.height' => [
+                'type' => 'input.text',
+                'label' => 'Maximum Height',
+                'description' => 'Set image max. height in rem, em, px, or percentage unit values. Leave empty to use the default height.',
+                'pattern' => '\\d+(\\.\\d+){0,1}(rem|em|ex|ch|vw|vh|vmin|vmax|%|px|cm|mm|in|pt|pc)',
+                'name' => 'particles.logo.height'
+            ],
             'particles.logo.link' => [
                 'type' => 'input.checkbox',
                 'label' => 'Link',
@@ -1336,9 +1360,12 @@ return [
                 'type' => 'select.select',
                 'label' => 'Target',
                 'description' => 'Target browser window when item is clicked.',
-                'default' => '_blank',
+                'default' => '',
                 'options' => [
-                    '_parent' => 'Self',
+                    '' => 'None',
+                    '_self' => 'Self',
+                    '_parent' => 'Parent',
+                    '_top' => 'Top',
                     '_blank' => 'New Window'
                 ],
                 'name' => 'particles.social.target'
@@ -1384,6 +1411,11 @@ return [
                 'type' => 'input.text',
                 'label' => 'Text',
                 'name' => 'particles.social.items.*.text'
+            ],
+            'particles.social.items.*.title' => [
+                'type' => 'input.text',
+                'label' => 'Title',
+                'name' => 'particles.social.items.*.title'
             ],
             'particles.social.items.*.link' => [
                 'type' => 'input.text',
@@ -2011,6 +2043,20 @@ return [
                 'description' => 'Anything in this field will be appended right before the closing body tag',
                 'name' => 'page.body.body_bottom'
             ],
+            'page.fontawesome' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    
+                ]
+            ],
+            'page.fontawesome.enable' => [
+                'type' => 'enable.enable',
+                'label' => 'Enable',
+                'description' => 'Enable or disable the loading of the Font Awesome icon library on the frontend. This is useful if you want to manually add a different version of the library (e.g. v5.x).',
+                'default' => 1,
+                'name' => 'page.fontawesome.enable'
+            ],
             'page.head' => [
                 'type' => '_root',
                 'form_field' => false,
@@ -2105,6 +2151,7 @@ return [
                 'contentarray' => [
                     'enabled' => 'particles.contentarray.enabled',
                     '_tab_articles' => 'particles.contentarray._tab_articles',
+                    'title' => 'particles.contentarray.title',
                     'article' => [
                         'filter' => [
                             'categories' => 'particles.contentarray.article.filter.categories',
@@ -2127,6 +2174,7 @@ return [
                                 'formatting' => 'particles.contentarray.article.display.text.formatting',
                                 'prepare' => 'particles.contentarray.article.display.text.prepare'
                             ],
+                            'edit' => 'particles.contentarray.article.display.edit',
                             'title' => [
                                 'enabled' => 'particles.contentarray.article.display.title.enabled',
                                 'limit' => 'particles.contentarray.article.display.title.limit'
@@ -2209,6 +2257,7 @@ return [
                     'url' => 'particles.logo.url',
                     'target' => 'particles.logo.target',
                     'image' => 'particles.logo.image',
+                    'height' => 'particles.logo.height',
                     'link' => 'particles.logo.link',
                     'svg' => 'particles.logo.svg',
                     'text' => 'particles.logo.text',
@@ -2254,6 +2303,7 @@ return [
                             'name' => 'particles.social.items.*.name',
                             'icon' => 'particles.social.items.*.icon',
                             'text' => 'particles.social.items.*.text',
+                            'title' => 'particles.social.items.*.title',
                             'link' => 'particles.social.items.*.link'
                         ]
                     ]
@@ -2307,6 +2357,9 @@ return [
                             'priority' => 'page.assets.javascript.*.priority'
                         ]
                     ]
+                ],
+                'fontawesome' => [
+                    'enable' => 'page.fontawesome.enable'
                 ],
                 'head' => [
                     'meta' => 'page.head.meta',

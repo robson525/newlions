@@ -9,8 +9,8 @@ layout:
       - custom-5173
   /navigation/:
     -
-      - 'logo-1829 15'
-      - 'menu-5263 85'
+      - 'logo-1829 20'
+      - 'menu-5263 80'
   /slideshow/:
     -
       - position-position-1765
@@ -28,12 +28,13 @@ layout:
         'aside 5': {  }
   /abovefooter/:
     -
-      - 'custom-3704 33'
-      - 'custom-7118 33'
-      - 'custom-3615 34'
+      - 'custom-3704 33.3'
+      - 'custom-2363 33.3'
+      - 'custom-7118 33.3'
     -
-      - 'social-9438 50'
-      - 'position-position-4980 50'
+      - 'custom-3615 33.3'
+      - 'social-9438 33.3'
+      - 'position-position-4980 33.3'
   /footer/:
     -
       - branding-4929
@@ -94,6 +95,8 @@ content:
       html: '<h3 style="margin:0 0 0 25px; font-weight: bold;">Lions Distrito LA6</h3>'
   logo-1829:
     title: 'Logo / Image'
+    attributes:
+      image: 'gantry-media://main-logo/logo-2020.png'
   menu-5263:
     attributes:
       mobileTarget: '1'
@@ -106,14 +109,19 @@ content:
   custom-3704:
     title: Lions
     attributes:
-      html: "<div class=\"abovefooter-ct text-center\">\n  <img src=\"gantry-media://main-logo/lions.png\" alt=\"\" />\n<p>Associação Internacional de Lions Clubes </div>\n"
+      html: "<div class=\"abovefooter-ct text-center\">\n  <img src=\"gantry-media://main-logo/lions.png\" alt=\"Lions\" />\n<p>Associação Internacional de Lions Clubes </div>\n"
+  custom-2363:
+    title: 'Logo Internacional'
+    attributes:
+      html: "<div class=\"abovefooter-ct text-center\">\n  <img src=\"gantry-media://main-logo/inter2020.png\" alt=\"Associação Internacional\" />\n<p>Associação Internacional</p></div>\n"
   custom-7118:
     title: Pin
     attributes:
-      html: "<div class=\"abovefooter-ct text-center\">\n  <img src=\"gantry-media://main-logo/pin2018.png\" alt=\"\" />\n<p>Governadoria do Distrito LA-6</p></div>\n"
+      html: "<div class=\"abovefooter-ct text-center\">\n  <img src=\"gantry-media://main-logo/pin2020.png\" alt=\"Pin\" />\n<p>Governadoria do Distrito LA-6</p></div>\n"
   custom-3615:
     title: Lema
     attributes:
+      enabled: 0
       html: "<div class=\"text-center\">\n<div style=\"margin: 0 auto; width: 105px; text-align: left !important;\">\n<strong>L</strong><span style=\"color: #cacaca;\">BERDADE</span><br/>\n<strong>I</strong><span style=\"color: #cacaca;\">GUALDADE</span><br/>\n<strong>O</strong><span style=\"color: #cacaca;\">RDEM</span><br/>\n<strong>N</strong><span style=\"color: #cacaca;\">ACIONALISMO</span><br/>\n<strong>S</strong><span style=\"color: #cacaca;\">ERVIÇO</span> \n</div>\n</div>"
   social-9438:
     attributes:

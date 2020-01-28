@@ -1,145 +1,145 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1555289540,
-    'checksum' => '42ab31d20fdb46e96b03eba93fd143ba',
+    'timestamp' => 1579768821,
+    'checksum' => 'e92a0582ee726fba79a3fa102427f5d4',
     'files' => [
         'templates/jl_consultancy_free/custom/config/9' => [
             'index' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/9/index.yaml',
-                'modified' => 1555289537
+                'modified' => 1564685993
             ],
             'layout' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/9/layout.yaml',
-                'modified' => 1555289537
+                'modified' => 1564685993
             ],
             'page/assets' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/9/page/assets.yaml',
-                'modified' => 1552965986
+                'modified' => 1559601050
             ]
         ],
         'templates/jl_consultancy_free/custom/config/default' => [
             'index' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/index.yaml',
-                'modified' => 1555289537
+                'modified' => 1564685993
             ],
             'layout' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/layout.yaml',
-                'modified' => 1555289537
+                'modified' => 1564685993
             ],
             'page/assets' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/page/assets.yaml',
-                'modified' => 1546802760
+                'modified' => 1559601050
             ],
             'page/body' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/page/body.yaml',
-                'modified' => 1546802760
+                'modified' => 1559601050
             ],
             'page/head' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/page/head.yaml',
-                'modified' => 1546802760
+                'modified' => 1559601050
             ],
             'particles/branding' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/branding.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/content' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/content.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/contentarray' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/contentarray.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/copyright' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/copyright.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/custom' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/custom.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/date' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/date.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/logo' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/logo.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/menu' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/menu.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/messages' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/messages.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/mobile-menu' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/mobile-menu.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/module' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/module.yaml',
-                'modified' => 1546805161
+                'modified' => 1559601050
             ],
             'particles/offcanvas-toggle' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/offcanvas-toggle.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/position' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/position.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/social' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/social.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/spacer' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/spacer.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/totop' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/totop.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'styles' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/styles.yaml',
-                'modified' => 1551070732
+                'modified' => 1563037838
             ]
         ],
         'templates/jl_consultancy_free/config/default' => [
             'page/assets' => [
                 'file' => 'templates/jl_consultancy_free/config/default/page/assets.yaml',
-                'modified' => 1546799030
+                'modified' => 1559601011
             ],
             'page/body' => [
                 'file' => 'templates/jl_consultancy_free/config/default/page/body.yaml',
-                'modified' => 1546799030
+                'modified' => 1559601011
             ],
             'page/head' => [
                 'file' => 'templates/jl_consultancy_free/config/default/page/head.yaml',
-                'modified' => 1546799030
+                'modified' => 1559601011
             ],
             'particles/branding' => [
                 'file' => 'templates/jl_consultancy_free/config/default/particles/branding.yaml',
-                'modified' => 1546799030
+                'modified' => 1559601011
             ],
             'particles/copyright' => [
                 'file' => 'templates/jl_consultancy_free/config/default/particles/copyright.yaml',
-                'modified' => 1546799030
+                'modified' => 1559601011
             ],
             'particles/logo' => [
                 'file' => 'templates/jl_consultancy_free/config/default/particles/logo.yaml',
-                'modified' => 1546799030
+                'modified' => 1559601011
             ],
             'particles/social' => [
                 'file' => 'templates/jl_consultancy_free/config/default/particles/social.yaml',
-                'modified' => 1546799030
+                'modified' => 1559601011
             ],
             'styles' => [
                 'file' => 'templates/jl_consultancy_free/config/default/styles.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600941
             ]
         ]
     ],
@@ -310,6 +310,7 @@ return [
                             'formatting' => 'text',
                             'prepare' => '0'
                         ],
+                        'edit' => false,
                         'title' => [
                             'enabled' => 'show',
                             'limit' => ''
@@ -400,6 +401,9 @@ return [
                 ],
                 'body_top' => '',
                 'body_bottom' => ''
+            ],
+            'fontawesome' => [
+                'enable' => 1
             ],
             'assets' => [
                 'favicon' => 'gantry-media://favicon.ico',
@@ -537,9 +541,9 @@ return [
             'menustyle' => [
                 'text-color' => '#666666',
                 'text-color-active' => '#2a64bb',
-                'sublevel-text-color' => '#fafafa',
-                'sublevel-text-color-active' => '#132d54',
-                'sublevel-background' => '#2a64bb'
+                'sublevel-text-color' => '#000000',
+                'sublevel-text-color-active' => '#ffffff',
+                'sublevel-background' => '#ffffff'
             ],
             'navigation' => [
                 'background' => '#ffffff',
@@ -565,7 +569,7 @@ return [
         ],
         'index' => [
             'name' => 9,
-            'timestamp' => 1555289537,
+            'timestamp' => 1564685993,
             'version' => 7,
             'preset' => [
                 'image' => 'gantry-admin://images/layouts/home.png',
@@ -807,7 +811,10 @@ return [
                     ]
                 ],
                 'logo-1829' => [
-                    'title' => 'Logo / Image'
+                    'title' => 'Logo / Image',
+                    'attributes' => [
+                        'image' => 'gantry-media://main-logo/logo-2020.png'
+                    ]
                 ],
                 'menu-5263' => [
                     'attributes' => [
@@ -827,8 +834,17 @@ return [
                     'title' => 'Lions',
                     'attributes' => [
                         'html' => '<div class="abovefooter-ct text-center">
-  <img src="gantry-media://main-logo/lions.png" alt="" />
+  <img src="gantry-media://main-logo/lions.png" alt="Lions" />
 <p>Associação Internacional de Lions Clubes </div>
+'
+                    ]
+                ],
+                'custom-2363' => [
+                    'title' => 'Logo Internacional',
+                    'attributes' => [
+                        'html' => '<div class="abovefooter-ct text-center">
+  <img src="gantry-media://main-logo/inter2020.png" alt="Associação Internacional" />
+<p>Associação Internacional</p></div>
 '
                     ]
                 ],
@@ -836,7 +852,7 @@ return [
                     'title' => 'Pin',
                     'attributes' => [
                         'html' => '<div class="abovefooter-ct text-center">
-  <img src="gantry-media://main-logo/pin2018.png" alt="" />
+  <img src="gantry-media://main-logo/pin2020.png" alt="Pin" />
 <p>Governadoria do Distrito LA-6</p></div>
 '
                     ]
@@ -844,6 +860,7 @@ return [
                 'custom-3615' => [
                     'title' => 'Lema',
                     'attributes' => [
+                        'enabled' => 0,
                         'html' => '<div class="text-center">
 <div style="margin: 0 auto; width: 105px; text-align: left !important;">
 <strong>L</strong><span style="color: #cacaca;">BERDADE</span><br/>

@@ -1,141 +1,141 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1555204070,
-    'checksum' => '0d70253ff81913c02a01a2d0a21e57c5',
+    'timestamp' => 1579770024,
+    'checksum' => '66a9a5ed5774b13b13d99debaaeed59f',
     'files' => [
         'templates/jl_consultancy_free/custom/config/_error' => [
             'index' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/_error/index.yaml',
-                'modified' => 1555201436
+                'modified' => 1564685993
             ],
             'layout' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/_error/layout.yaml',
-                'modified' => 1555201436
+                'modified' => 1564685993
             ]
         ],
         'templates/jl_consultancy_free/custom/config/default' => [
             'index' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/index.yaml',
-                'modified' => 1555201436
+                'modified' => 1564685993
             ],
             'layout' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/layout.yaml',
-                'modified' => 1555201436
+                'modified' => 1564685993
             ],
             'page/assets' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/page/assets.yaml',
-                'modified' => 1546802760
+                'modified' => 1559601050
             ],
             'page/body' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/page/body.yaml',
-                'modified' => 1546802760
+                'modified' => 1559601050
             ],
             'page/head' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/page/head.yaml',
-                'modified' => 1546802760
+                'modified' => 1559601050
             ],
             'particles/branding' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/branding.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/content' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/content.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/contentarray' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/contentarray.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/copyright' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/copyright.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/custom' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/custom.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/date' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/date.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/logo' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/logo.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/menu' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/menu.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/messages' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/messages.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/mobile-menu' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/mobile-menu.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/module' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/module.yaml',
-                'modified' => 1546805161
+                'modified' => 1559601050
             ],
             'particles/offcanvas-toggle' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/offcanvas-toggle.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/position' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/position.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/social' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/social.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/spacer' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/spacer.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'particles/totop' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/particles/totop.yaml',
-                'modified' => 1546805160
+                'modified' => 1559601050
             ],
             'styles' => [
                 'file' => 'templates/jl_consultancy_free/custom/config/default/styles.yaml',
-                'modified' => 1551070732
+                'modified' => 1563037838
             ]
         ],
         'templates/jl_consultancy_free/config/default' => [
             'page/assets' => [
                 'file' => 'templates/jl_consultancy_free/config/default/page/assets.yaml',
-                'modified' => 1546799030
+                'modified' => 1559601011
             ],
             'page/body' => [
                 'file' => 'templates/jl_consultancy_free/config/default/page/body.yaml',
-                'modified' => 1546799030
+                'modified' => 1559601011
             ],
             'page/head' => [
                 'file' => 'templates/jl_consultancy_free/config/default/page/head.yaml',
-                'modified' => 1546799030
+                'modified' => 1559601011
             ],
             'particles/branding' => [
                 'file' => 'templates/jl_consultancy_free/config/default/particles/branding.yaml',
-                'modified' => 1546799030
+                'modified' => 1559601011
             ],
             'particles/copyright' => [
                 'file' => 'templates/jl_consultancy_free/config/default/particles/copyright.yaml',
-                'modified' => 1546799030
+                'modified' => 1559601011
             ],
             'particles/logo' => [
                 'file' => 'templates/jl_consultancy_free/config/default/particles/logo.yaml',
-                'modified' => 1546799030
+                'modified' => 1559601011
             ],
             'particles/social' => [
                 'file' => 'templates/jl_consultancy_free/config/default/particles/social.yaml',
-                'modified' => 1546799030
+                'modified' => 1559601011
             ],
             'styles' => [
                 'file' => 'templates/jl_consultancy_free/config/default/styles.yaml',
-                'modified' => 1546799030
+                'modified' => 1559600941
             ]
         ]
     ],
@@ -306,6 +306,7 @@ return [
                             'formatting' => 'text',
                             'prepare' => '0'
                         ],
+                        'edit' => false,
                         'title' => [
                             'enabled' => 'show',
                             'limit' => ''
@@ -396,6 +397,9 @@ return [
                 ],
                 'body_top' => '',
                 'body_bottom' => ''
+            ],
+            'fontawesome' => [
+                'enable' => 1
             ],
             'assets' => [
                 'favicon' => 'gantry-media://favicon.ico',
@@ -525,9 +529,9 @@ return [
             'menustyle' => [
                 'text-color' => '#666666',
                 'text-color-active' => '#2a64bb',
-                'sublevel-text-color' => '#fafafa',
-                'sublevel-text-color-active' => '#132d54',
-                'sublevel-background' => '#2a64bb'
+                'sublevel-text-color' => '#000000',
+                'sublevel-text-color-active' => '#ffffff',
+                'sublevel-background' => '#ffffff'
             ],
             'navigation' => [
                 'background' => '#ffffff',
@@ -553,7 +557,7 @@ return [
         ],
         'index' => [
             'name' => '_error',
-            'timestamp' => 1555201436,
+            'timestamp' => 1564685993,
             'version' => 7,
             'preset' => [
                 'image' => 'gantry-admin://images/layouts/default.png',

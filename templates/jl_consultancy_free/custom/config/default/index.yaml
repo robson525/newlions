@@ -1,5 +1,5 @@
 name: default
-timestamp: 1555289537
+timestamp: 1564685993
 version: 7
 preset:
   image: 'gantry-admin://images/layouts/home.png'
@@ -22,6 +22,7 @@ particles:
   custom:
     custom-5173: 'Header Contact'
     custom-3704: Lions
+    custom-2363: 'Logo Internacional'
     custom-7118: Pin
     custom-3615: Lema
   logo:
