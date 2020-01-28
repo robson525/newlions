@@ -72,7 +72,7 @@ class UsersModelProfile extends JModelForm
 	}
 
 	private function verifica($campo, $valor) {
-	    $tabela = $campo=='matricula' ? '__usuario' : 'jom1_users';
+	    $tabela = $campo=='matricula' ? '__usuario' : 'jom1__users';
 	    $campo = $campo=='matricula' ? 'matricula' : 'username';
 	   	$db = $this->getDbo();		   	
 	    $sql = "SELECT * FROM $tabela WHERE $campo = '$valor';";

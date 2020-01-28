@@ -87,7 +87,7 @@
 			required="true"
 			size="30"
 			maxlength="50"
-			unique="true"
+			unique="false"
 			validate="email"
 			validDomains="com_users.domains"
 			autocomplete="email"

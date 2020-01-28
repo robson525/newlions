@@ -2,14 +2,15 @@
 <form>
 	<fieldset name="default" label="COM_USERS_REMIND_DEFAULT_LABEL">
 		<field
-			name="email"
-			type="email"
-			label="COM_USERS_FIELD_REMIND_EMAIL_LABEL"
-			description="COM_USERS_FIELD_REMIND_EMAIL_DESC"
+			name="username"
+			type="text"
+			label="COM_USERS_FIELD_RESET_CONFIRM_USERNAME_LABEL"
+			description="COM_USERS_FIELD_RESET_CONFIRM_USERNAME_DESC"
 			required="true"
-			size="30"
-			validate="email"
-			autocomplete="email"
+			size="10"
+			maxlength="11"
+			validate="username"
+			autocomplete="username"
 		/>
 		
 		<field
