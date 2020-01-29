@@ -57,7 +57,8 @@
 				$return = false;
 			}
 
-			if(strlen($requestData['registration']) != 10){
+			$requestData['registration'] = str_pad(str_replace(".", ",", $requestData['registration']), 10, "0", STR_PAD_LEFT);
+			if(!is_numeric($requestData['registration'])){
 				$this->setError('A Matrícula digitada é inválida. Informe outra matrícula.');
 				$return = false;
 			}			
