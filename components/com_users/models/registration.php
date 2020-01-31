@@ -46,28 +46,29 @@
 
 		public function validate($form, $requestData, $group = NULL){
 
-			$return = true;
+			$validate1 = true;
 
 			if(strlen($requestData['username']) != 11){
 				$this->setError('O CPF informado é inválido. Informe outro CPF.');
-				$return = false;
+				$validate1 = false;
 			}
 			elseif ($this->verifica('cpf', $requestData['username']) !== false) {
 				$this->setError('O CPF informado já está em uso. Informe outro CPF.');
-				$return = false;
+				$validate1 = false;
 			}
 
 			$requestData['registration'] = str_pad(str_replace(".", ",", $requestData['registration']), 10, "0", STR_PAD_LEFT);
 			if(!is_numeric($requestData['registration'])){
 				$this->setError('A Matrícula digitada é inválida. Informe outra matrícula.');
-				$return = false;
+				$validate1 = false;
 			}			
 			elseif ($requestData['registration'] != "0000000000"  && $this->verifica('matricula', $requestData['registration']) !== false) {
 				$this->setError('A Matrícula digitada já está em uso. Informe outra matrícula.');	
-				$return = false;			
+				$validate1 = false;			
 			}
-
-			return parent::validate($form, $requestData, $group) && $return;
+			
+			$validate2 = parent::validate($form, $requestData, $group);
+			return $validate1 && $validate2 ? $validate2 : false;
 		}
 
 		private function verifica($campo, $valor) {

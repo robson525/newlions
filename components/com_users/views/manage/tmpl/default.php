@@ -78,6 +78,8 @@ defined('_JEXEC') or die;
                     <th >Nº</th>
                     <th >Prefixo</th>
                     <th >Nome</th>
+                    <th >Matrícula</th>
+                    <th >CPF</th>
                     <th >Estado</th>
                     <th >Cidade</th>
                     <th >Cluble</th>
@@ -97,6 +99,8 @@ defined('_JEXEC') or die;
                         <td ><?php echo $i + 1 ?></td>
                         <td ><?php echo $iscrito->prefixo ?></td>
                         <td ><?php echo $iscrito->name ?></td>
+                        <td ><?php echo $iscrito->matricula ?></td>
+                        <td ><?php echo $iscrito->cpf ?></td>
                         <td ><?php echo $iscrito->estado ?></td>
                         <td ><?php echo $iscrito->cidade ?></td>
                         <td ><?php echo $iscrito->clube ?></td>
@@ -179,6 +183,7 @@ defined('_JEXEC') or die;
 	    <?php } ?>
 
     </script>
+	
 <?php else: ?>
     <br>
         <center><h3>Ainda não há Inscritos</h3></center>

@@ -188,7 +188,7 @@ class InscricaoConvencao {
     }
     
     public static function getInscricoesGerencia($convencaoId = 0, $estado, $cidade, $clube, $db = null){
-        $sql  = "SELECT u.*, us.name, us.email, count(*) as inscricoes ";
+        $sql  = "SELECT u.*, us.name, us.email, us.username as cpf, count(*) as inscricoes ";
         $sql .= "FROM __inscricao_convencao ic ";
         $sql .= "INNER JOIN __usuario u ON u.id = ic.usuario_id ";
         $sql .= "INNER JOIN jom1__users us ON us.id = u.user_id ";
