@@ -305,7 +305,7 @@ class InscricaoConvencao {
     
 
     public static function getSNinscricao($id) {
-        $inscricao = $id - 2351;
+        $inscricao = $id - 2456;
         if(strlen($inscricao) == 1){
             return '00' . $inscricao;
         }else if(strlen($inscricao) == 2){
